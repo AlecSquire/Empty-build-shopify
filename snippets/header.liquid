@@ -1,0 +1,14 @@
+<header>
+  {{ shop.name }}
+    <ul class="nav-bar">
+    <!-- Main menu -->
+    {% for link in linklists.main-menu.links -%}
+      {{ link.title | link_to: link.url }}
+    {%- endfor %}
+
+    <!-- Footer menu -->
+    {% for link in linklists['footer'].links -%}
+      {{ link.title | link_to: link.url }}
+    {%- endfor %}
+  </ul>
+</header>

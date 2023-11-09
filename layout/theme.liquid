@@ -1,9 +1,11 @@
 <html>
   <head>
-    {{ content_for_header }}123
-    <h1>hello</h1>
+    {{ content_for_header }}
+    <link rel='stylesheet' type='text/css' media='screen' href='{{ 'style.css' | asset_url }}'> 
+    
   </head>
   <body>
+    {%  render 'header' %}
     {{ content_for_layout }}
   </body>
 </html>

@@ -1,0 +1,18 @@
+{{ product.featured_image | image_url: width: 200 | image_tag }}
+{{ product.title }}
+{{ product.price | money }}
+<div> {{product.description}}
+</div>
+{% form 'product', product%}
+    <select name="id">
+        {% for variant in product.variants %}
+          <option value="{{ variant.id }}"
+            {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+          >
+            {{ variant.title }} - {{ variant.price | money }}
+          </option>
+        {% endfor %}
+      </select>
+  
+    <input type="submit" value="Add to cart">
+  {% endform %}
