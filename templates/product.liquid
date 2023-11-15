@@ -1,9 +1,10 @@
 {{ product.featured_image | image_url: width: 200 | image_tag }}
-{{ product.title }}
-{{ product.price | money }}
-<div> {{product.description}}
+<H3>{{ product.title }}</H3>
+<p> {{ product.price | money }}</p>
+<div> 
+  {{ product.description }}
 </div>
-{% form 'product', product%}
+{% form 'product', product %}
     <select name="id">
         {% for variant in product.variants %}
           <option value="{{ variant.id }}"
@@ -15,4 +16,9 @@
       </select>
   
     <input type="submit" value="Add to cart">
+    <input type="text" name="quantity" min="1" value="1">
+    <div class="buy-now-button">
+    {{ form | payment_button }}
+    </div>
+    
   {% endform %}

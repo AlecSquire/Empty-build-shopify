@@ -1,0 +1,46 @@
+{% if cart.empty? %}
+  <div class="empty-cart-div">
+    <h3>Oh no... Your cart is empty!</h3>
+    <img
+      class="cart-empty"
+      src="{{ 'Empty-bro.png' | asset_url }}"
+      loading="eager" />
+
+      </div>
+{% else %}
+  <h2>Your Cart</h2>
+  <form action="{{ routes.cart_url }}" method="post">
+    {% for item in cart.items %}
+      <div class="product.cart">
+        <a href="{{ item.product.url }}"> 
+          {{ item.product.title }}</a>
+          {{ item.product.price | money }}
+          <input type="text" name="updates[]" value="{{ item.quantity }}">
+          <input type="submit" value="Update cart">
+          <a href="{{ item.url_to_remove }}">Remove</a>
+        {{ item.image | image_url: width: 200 | image_tag }}
+        
+  {% unless item.properties == empty %}
+    {% for property in item.properties %}
+      {{ property.first }}:
+
+      {% if property.last contains '/uploads/' %}
+        <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+      {% else %}
+        {{ property.last }}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+
+        
+        </form>
+      </div>
+     
+    {% endfor %}
+<form>
+    <input
+      type="submit"
+      name="checkout"
+      value="Checkout">
+  </form>
+{% endif %}

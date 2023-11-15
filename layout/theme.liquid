@@ -1,11 +1,21 @@
 <html>
   <head>
     {{ content_for_header }}
-    <link rel='stylesheet' type='text/css' media='screen' href='{{ 'style.css' | asset_url }}'> 
-    
+
+    <link
+      rel='stylesheet'
+      type='text/css'
+      media='screen'
+      href='{{ 'style.css' | asset_url }}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Young+Serif&display=swap" rel="stylesheet">
   </head>
   <body>
-    {%  render 'header' %}
+    {% render 'header' %}
     {{ content_for_layout }}
   </body>
 </html>

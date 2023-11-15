@@ -1,14 +1,10 @@
-{{ collections['all-products'].title }}
 
-<div class="product-container">
-  {% for product in collections['all-products'].products %}
-    <div class="product">
-      <a href="{{ product.url }}">
-        {{ product.title | link_to: product.url }}
-        {{ product | image_url: width: 200 | image_tag }}
-        {{ product.title }}
-        {{ product.price | money }}
-      </a>
-    </div>
-  {% endfor %}
-</div>
+{% for collection in collections %}
+  <a href="{{ collection.url }}" class="collection-item"
+      <h1>{{ collection.title }}</h1>
+      <p>{{collection.description }}</p>
+      <img src="{{ collection.image.src | img_url: '300x300' }}" alt="{{ collection.title | escape }}">
+  
+    
+  </div>
+{% endfor %}

@@ -1,0 +1,9 @@
+{% for collection in collections %}
+    <a href="{{ collection.url }}" class="collection-item"
+        <h1>{{ collection.title }}</h1>
+        <p>{{collection.description }}</p>
+        <img src="{{ collection.image.src | img_url: '300x300' }}" alt="{{ collection.title | escape }}">
+    
+      
+    </div>
+  {% endfor %}

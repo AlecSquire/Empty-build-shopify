@@ -1,6 +1,6 @@
 <header>
-  {{ shop.name }}
-    <ul class="nav-bar">
+  <img  class="logo" src="{{ 'logo.png' | asset_img_url }}" />
+  <ul class="nav-bar">
     <!-- Main menu -->
     {% for link in linklists.main-menu.links -%}
       {{ link.title | link_to: link.url }}
