@@ -122,3 +122,8 @@ h3 {
 #hero {
 width:100%;
 }
+
+body {
+  background-color: {{ settings.bg | default: '#ffffff' }};
+  color: {{ settings.body_text | default: '#000000' }};
+}

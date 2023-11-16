@@ -4,7 +4,7 @@
     "settings": [
       {
         "type": "color_background",
-        "id": "background",
+        "id": "bg",
         "label": "Background",
         "default": "linear-gradient(#ffffff, #000000)"
       }
