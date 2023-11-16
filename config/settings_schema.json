@@ -20,15 +20,5 @@
         "default": "#000000"
       }
     ]
-  },
-  {
-    "name": "img picker",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "image_with_text_image",
-        "label": "Image"
-      }
-    ]
   }
 ]

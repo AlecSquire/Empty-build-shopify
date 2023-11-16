@@ -1,0 +1,10 @@
+{% schema %}
+{
+  "sections": {
+    "main": {
+      "type": "404-main"
+    }
+  },
+  "order": ["404-main"]
+}
+{% endschema %}
