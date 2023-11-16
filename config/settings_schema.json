@@ -1,3 +1,24 @@
 [
-
+  {
+    "name": "background color picker",
+    "settings": [
+      {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(#ffffff, #000000)"
+      }
+    ]
+  },
+  {
+    "name": "color picker",
+    "settings": [
+      {
+        "type": "color",
+        "id": "body_text",
+        "label": "Body text",
+        "default": "#000000"
+      }
+    ]
+  }
 ]

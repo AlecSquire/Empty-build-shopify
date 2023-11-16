@@ -1,0 +1,5 @@
+{% for item in search.results %}
+    <!-- item details -->
+  
+    {{ item.content | highlight: search.terms }}
+  {% endfor %}
