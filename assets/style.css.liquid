@@ -1,6 +1,5 @@
 body {
-  background-color: #111;
-  color: #ddd;
+
   font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
@@ -121,4 +120,9 @@ h3 {
 }
 #hero {
 width:100%;
+}
+
+body {
+  background-color: {{ settings.bg | default: '#ffffff' }};
+  color: {{ settings.body_text | default: '#000000' }};
 }
