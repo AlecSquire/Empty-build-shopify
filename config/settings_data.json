@@ -1,6 +1,6 @@
 {
   "current": {
-    "bg": "linear-gradient(104deg, rgba(138, 59, 59, 1), rgba(0, 0, 0, 1) 100%)",
+    "bg": "radial-gradient(rgba(190, 51, 51, 1), rgba(0, 0, 0, 1) 100%)",
     "body_text": "#995757",
     "content_for_index": [
 
