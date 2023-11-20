@@ -4,17 +4,9 @@
       "type": "index",
       "settings": {
       }
-    },
-    "7b562569-70c8-42c1-a096-250e8f964029": {
-      "type": "custom-section",
-      "settings": {
-        "footer_linklist_title": "gdasfsgahjkDFHDAJKDFHGF JE SCHSAHD JAS",
-        "heading_font": "serif"
-      }
     }
   },
   "order": [
-    "main",
-    "7b562569-70c8-42c1-a096-250e8f964029"
+    "main"
   ]
 }
