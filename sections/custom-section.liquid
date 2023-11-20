@@ -1,12 +1,31 @@
-<h1>hello world</h1>
+<h1 style="font-family: {{ section.settings.heading_font.family }};">
+  {{ section.settings.footer_linklist_title }}
+</h1>
+
 {% schema %}
   {
     "name": "Custom section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_linklist_title",
+        "label": "Heading",
+        "default": "is this placeholder text?"
+      }, {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading font",
+        "default": "helvetica_n4"
+      }
+
+    ],
     "presets": [
       {
-        "name": "Default custom section"
+        "name": "Bespoke Header"
       }
-    ]
+    ],
+    "tag": "header",
+    "class": "custom-section",
+    "limit": 1
   }
 {% endschema %}
