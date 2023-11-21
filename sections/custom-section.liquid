@@ -1,7 +1,10 @@
 <h1 style="font-family: {{ section.settings.heading_font.family }};">
   {{ section.settings.footer_linklist_title }}
 </h1>
+<p>{{ section.settings.inline }}</p>
+{% stylesheet %}
 
+{% endstylesheet %}
 {% schema %}
   {
     "name": "Custom section",
@@ -16,7 +19,29 @@
         "id": "heading_font",
         "label": "Heading font",
         "default": "helvetica_n4"
-      }
+      }, {
+        "type": "inline_richtext",
+        "id": "inline",
+        "default": "my <i>inline</i> <b>text</b>",
+        "label": "Inline rich text"
+      }, {
+        "type": "color",
+        "id": "body_text",
+        "label": "Body text",
+        "default": "#000000"
+        },
+        {
+   "type": "text_alignment",
+   "id": "alignment",
+   "label": "Text alignment",
+   "default": "center"
+},
+{
+  "type": "richtext",
+  "id": "paragraph",
+  "label": "Paragraph"
+}
+
 
     ],
     "presets": [

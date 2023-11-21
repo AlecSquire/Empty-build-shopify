@@ -1,26 +1,31 @@
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+
 <h1>{{ collection.title }}</h1>
 {% paginate collection.products by 20 %}
-<select id="sort-by">
-  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+  <select id="sort-by">
+    {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-  {% for option in collection.sort_options %}
-    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-      {{ option.name }}
-    </option>
+    {% for option in collection.sort_options %}
+      <option
+        value="{{ option.value }}"
+        {% if option.value == sort_by %}
+        selected="selected"
+        {% endif %}>
+        {{ option.name }}
+      </option>
+    {% endfor %}
+  </select>
+
+  {% for product in collection.products %}
+
+    {% render 'product-item'
+      , product: product %}
+
+
   {% endfor %}
-</select>
 
-{% for product in collection.products %}
-    
-    {% render 'product-item', product : product %}
+  {{ paginate | default_pagination }}
 
-
-
-
-{% endfor %}
-
-{{ paginate | default_pagination }}
- 
 {% endpaginate %}
 
 <script>

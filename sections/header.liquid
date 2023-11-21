@@ -1,0 +1,53 @@
+<div class="width">
+  <a href="/" class="header-logo">
+    <img
+      src="{{ section.settings.logo | img_url: 'master' }} alt"
+      {{ site.name }}
+      ">
+  </a>
+</div>
+<p style="color: {{ settings.color_schemes.text }};">This is a paragraph.</p>
+
+<style>
+  .header-logo img {
+    display: flex;
+    max-width: {{ section.settings.logo_width }}px;
+  }
+</style>
+<header>
+  <ul class="nav-bar">
+    <!-- Main menu -->
+    {% for link in linklists.main-menu.links -%}
+      {{ link.title | link_to: link.url }}
+    {%- endfor %}
+
+    <!-- Footer menu -->
+    {% for link in linklists['footer'].links -%}
+      {{ link.title | link_to: link.url }}
+    {%- endfor %}
+  </ul>
+</header>
+{% schema %}
+  {
+    "name": "Header",
+    "tag": "header",
+    "class": "header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "logo"
+      }, {
+        "type": "range",
+        "id": "logo_width",
+        "label": "logo_width",
+        "default": 100,
+        "min": 20,
+        "max": 300,
+        "step": 5
+      }
+    ]
+  }
+
+
+{% endschema %}

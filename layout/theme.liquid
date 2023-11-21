@@ -15,7 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Young+Serif&display=swap" rel="stylesheet">
   </head>
   <body>
-    {% render 'header' %}
+    {% section 'header' %}
     {{ content_for_layout }}
+    <style>
+      body {
+        color: {{ section.settings.color_schemes.text }};
+        background-color: {{ section.settings.color_schemes.background }};
+      }
+    </style>
+
   </body>
 </html>
