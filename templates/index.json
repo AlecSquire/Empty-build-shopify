@@ -1,36 +1,11 @@
 {
-  "sections": {
-    "27dbab06-bf42-4f8f-857c-f9fcb8bbe667": {
-      "type": "custom-banner",
-      "settings": {
-        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png",
-        "alignment": "top",
-        "title": "This is for her",
-        "text": "<p>Womans collection <\/p>",
-        "hero_size": "large",
-        "text_size": "large",
-        "button_label": "",
-        "button_link": ""
+    "sections": {
+      "main": {
+        "type": "index"
       }
     },
-    "2f374764-e7a8-4847-8b73-bab5e33bc87d": {
-      "type": "custom-section",
-      "settings": {
-        "footer_linklist_title": "Free Standard shipping to United Kingdom on all orders above £62",
-        "heading_font": "abel_n4",
-        "inline": "Get VIP early access to our Cyber Week sale. <a href=\"https:\/\/fentybeauty.com\/pages\/signup\" title=\"https:\/\/fentybeauty.com\/pages\/signup\"><span style=\"text-decoration:underline\"><strong>Sign up<\/strong><\/span><\/a> or text CYBER to 88107 to access exclusive dealz.",
-        "body_text": "#000000"
-      }
-    },
-    "main": {
-      "type": "index",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "27dbab06-bf42-4f8f-857c-f9fcb8bbe667",
-    "2f374764-e7a8-4847-8b73-bab5e33bc87d",
-    "main"
-  ]
-}
+    "order": [
+      "main"
+    ]
+  }
+  
