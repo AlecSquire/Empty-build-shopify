@@ -1,11 +1,38 @@
 {
-    "sections": {
-      "main": {
-        "type": "index"
+  "sections": {
+    "main": {
+      "type": "index",
+      "settings": {
       }
     },
-    "order": [
-      "main"
-    ]
-  }
-  
+    "3a0fc628-b316-4ac0-af15-9ad20c6c8baf": {
+      "type": "custom-section",
+      "settings": {
+        "footer_linklist_title": "is this placeholder text?",
+        "heading_font": "helvetica_n4",
+        "inline": "my <i>inline<\/i> <b>text<\/b>",
+        "body_text": "#000000",
+        "alignment": "center",
+        "paragraph": ""
+      }
+    },
+    "11ef17fe-3c85-428c-92a3-dfa82240d6ac": {
+      "type": "custom-banner",
+      "settings": {
+        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png",
+        "alignment": "center",
+        "title": "sadsaas",
+        "text": "<p>sa<\/p>",
+        "hero_size": "medium",
+        "text_size": "medium",
+        "button_label": "",
+        "button_link": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3a0fc628-b316-4ac0-af15-9ad20c6c8baf",
+    "11ef17fe-3c85-428c-92a3-dfa82240d6ac"
+  ]
+}
