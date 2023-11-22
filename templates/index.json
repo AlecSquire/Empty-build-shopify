@@ -1,21 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "index",
-      "settings": {
-      }
-    },
-    "3a0fc628-b316-4ac0-af15-9ad20c6c8baf": {
-      "type": "custom-section",
-      "settings": {
-        "footer_linklist_title": "is this placeholder text?",
-        "heading_font": "helvetica_n4",
-        "inline": "my <i>inline<\/i> <b>text<\/b>",
-        "body_text": "#000000",
-        "alignment": "center",
-        "paragraph": ""
-      }
-    },
     "11ef17fe-3c85-428c-92a3-dfa82240d6ac": {
       "type": "custom-banner",
       "settings": {
@@ -28,11 +12,27 @@
         "button_label": "",
         "button_link": ""
       }
+    },
+    "3a0fc628-b316-4ac0-af15-9ad20c6c8baf": {
+      "type": "custom-section",
+      "settings": {
+        "footer_linklist_title": "is this placeholder text?",
+        "heading_font": "helvetica_n4",
+        "inline": "my <em>inline<\/em> <strong>text<\/strong>",
+        "body_text": "#000000",
+        "alignment": "center",
+        "paragraph": ""
+      }
+    },
+    "main": {
+      "type": "index",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main",
+    "11ef17fe-3c85-428c-92a3-dfa82240d6ac",
     "3a0fc628-b316-4ac0-af15-9ad20c6c8baf",
-    "11ef17fe-3c85-428c-92a3-dfa82240d6ac"
+    "main"
   ]
 }
