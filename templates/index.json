@@ -1,5 +1,12 @@
 {
   "sections": {
+    "0a43111d-ce2d-477b-b360-a8439b8901a7": {
+      "type": "image-text",
+      "settings": {
+        "text-overlay": "ITS A WANG THING",
+        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png"
+      }
+    },
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c": {
       "type": "header",
       "settings": {
@@ -24,20 +31,13 @@
       "settings": {
         "menu": "main-menu"
       }
-    },
-    "0a43111d-ce2d-477b-b360-a8439b8901a7": {
-      "type": "image-text",
-      "settings": {
-        "text-overlay": "ITS A WANG THING",
-        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png"
-      }
     }
   },
   "order": [
+    "0a43111d-ce2d-477b-b360-a8439b8901a7",
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
     "main",
     "e0168d3b-d0a4-4122-9018-c1994b4e9f39",
-    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790",
-    "0a43111d-ce2d-477b-b360-a8439b8901a7"
+    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790"
   ]
 }
