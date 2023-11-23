@@ -1,11 +1,42 @@
 {
-    "sections": {
-      "main": {
-        "type": "index"
+  "sections": {
+    "2fe634b0-45f5-4b6d-9808-14ccfd33638c": {
+      "type": "header",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
+        "logo_width": 100
       }
     },
-    "order": [
-      "main"
-    ]
-  }
-  
+    "main": {
+      "type": "index",
+      "settings": {
+      }
+    },
+    "e0168d3b-d0a4-4122-9018-c1994b4e9f39": {
+      "type": "image-text",
+      "settings": {
+        "text-overlay": "make her feel good this summer!",
+        "image_with_text_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg"
+      }
+    },
+    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790": {
+      "type": "header-custom",
+      "settings": {
+        "menu": "main-menu"
+      }
+    },
+    "0a43111d-ce2d-477b-b360-a8439b8901a7": {
+      "type": "image-text",
+      "settings": {
+        "text-overlay": "Your default text here"
+      }
+    }
+  },
+  "order": [
+    "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
+    "main",
+    "e0168d3b-d0a4-4122-9018-c1994b4e9f39",
+    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790",
+    "0a43111d-ce2d-477b-b360-a8439b8901a7"
+  ]
+}

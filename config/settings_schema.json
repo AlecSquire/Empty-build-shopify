@@ -37,16 +37,6 @@
     ]
   },
   {
-    "name": "Links for header",
-    "settings": [
-      {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Menu"
-      }
-    ]
-  },
-  {
     "name": "Color Scheme Settings",
     "settings": [
       {
