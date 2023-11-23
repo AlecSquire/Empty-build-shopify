@@ -1,0 +1,51 @@
+{% if section.settings.image_with_text_image != blank %}
+  <div class="image_with_text_image">
+    <img src="{{ section.settings.image_with_text_image | img_url: '1200x600'  }}" alt="">
+    <div class="text-overlay">
+      {{ section.settings.text-overlay }}
+    </div>
+  </div>
+
+{% endif %}
+{% for block in section.blocks %}
+  <img src="{{ block.settings['icon-image'] | img_url: 'master' }}" alt="">
+{% endfor %}
+
+{% schema %}
+  {
+  "name": "image with text",
+  "tag": "div",
+  "class": "image with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text-overlay",
+      "label": "Overlay Text",
+      "default": "Your default text here"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_with_text_image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon-image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text overlay"
+    }
+  ]
+}
+{% endschema %}

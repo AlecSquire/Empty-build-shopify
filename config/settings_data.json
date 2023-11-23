@@ -1,33 +1,79 @@
 {
   "current": {
-    "page_width": 1300,
+    "page_width": 1500,
+    "background_color": "#ffffff",
+    "textColor": "#151212",
+    "linkColor": "#000000",
+    "menu": "main-menu",
+    "checkout_header_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
+    "checkout_body_background_color": "#fff1f1",
     "bg": "radial-gradient(rgba(167, 97, 97, 1), rgba(0, 0, 0, 1) 100%)",
     "body_text": "#995757",
-    "color_schemes": {
-      "text": "#121212",
-      "background": "#FFFFFF",
-      "background_gradient": "linear-gradient(#FFFFFF, #000000)",
-      "primary_button": "#121212",
-      "on_primary_button": "#FFFFFF",
-      "primary_button_border": "#121212",
-      "secondary_button": "#FFFFFF",
-      "on_secondary_button": "#121212",
-      "secondary_button_border": "#FFFFFF",
-      "icons": "#FFFFFF",
-      "links": "#121212"
-    },
     "sections": {
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
-          "logo_width": 30
+          "logo": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
+          "logo_width": 150
+        }
+      },
+      "image-text": {
+        "type": "image-text",
+        "blocks": {
+          "7577ec83-9495-4bb6-ad8c-db27b07687d5": {
+            "type": "image",
+            "settings": {
+              "icon-image": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png"
+            }
+          }
+        },
+        "block_order": [
+          "7577ec83-9495-4bb6-ad8c-db27b07687d5"
+        ],
+        "settings": {
+          "text-overlay": "Feel good this sumer.",
+          "image_with_text_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg"
+        }
+      },
+      "header-custom": {
+        "type": "header-custom",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      "Text-box": {
+        "type": "Text-box",
+        "settings": {
+          "footer_linklist_title": "Act now!!!",
+          "heading_font": "helvetica_n4",
+          "inline": "20% off with code:Discount.",
+          "body_text": "#000000",
+          "alignment": "center",
+          "paragraph": ""
+        }
+      },
+      "custom-banner": {
+        "type": "custom-banner",
+        "settings": {
+          "image_with_text_image": "shopify:\/\/shop_images\/big-smiles-and-happy-woman.jpg",
+          "alignment": "center",
+          "title": "asddsadsasad",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "button_label": "",
+          "button_link": ""
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+
+    ]
   }
 }

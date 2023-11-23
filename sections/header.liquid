@@ -1,53 +1,87 @@
 <div class="width">
-  <a href="/" class="header-logo">
-    <img
-      src="{{ section.settings.logo | img_url: 'master' }} alt"
-      {{ site.name }}
-      ">
-  </a>
-</div>
-<p style="color: {{ settings.color_schemes.text }};">This is a paragraph.</p>
+  <div class="header-flex">
+    <a href="/" class="header-logo">
+      <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ site.name }}">
+    </a>
 
-<style>
+    <button class="header-hamburger">
+      <a href="/collections/modern-elegance-mens-collection" span class="header-hamburger-bar">Men</span></a> 
+      <a href="/collections/timeless-chic-womens-collection" span class="header-hamburger-bar">Woman</span></a> 
+      <a href="/" span class="header-hamburger-bar">Home</span></a> 
+    </button>
+  </div>
+
+  
+    <p style="color: {{ settings.color_schemes.text }};"></p>
+    <ul class="header-nav">
+      {% for link in section.settings.navigation.links %}
+        <li class="header-nav-item">
+          <a class="header-nav-anchor" href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="header-nav-overlay"></div>
+<style> 
   .header-logo img {
-    display: flex;
-    max-width: {{ section.settings.logo_width }}px;
-  }
-</style>
-<header>
-  <ul class="nav-bar">
-    <!-- Main menu -->
-    {% for link in linklists.main-menu.links -%}
-      {{ link.title | link_to: link.url }}
-    {%- endfor %}
+              display: block; /* Adjusted from flex to block */
+              max-width: {{ section.settings.logo_width }}px;
+              height: auto; /* To maintain
+            }
+    </style>
 
-    <!-- Footer menu -->
-    {% for link in linklists['footer'].links -%}
-      {{ link.title | link_to: link.url }}
-    {%- endfor %}
-  </ul>
-</header>
-{% schema %}
-  {
-    "name": "Header",
-    "tag": "header",
-    "class": "header",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "logo"
-      }, {
-        "type": "range",
-        "id": "logo_width",
-        "label": "logo_width",
-        "default": 100,
-        "min": 20,
-        "max": 300,
-        "step": 5
+    
+          {% schema %}
+            {
+              "name": "Header",
+              "tag": "header",
+              "class": "header",
+              "settings": [
+                {
+                  "type": "image_picker",
+                  "id": "logo",
+                  "label": "logo"
+                }, {
+                  "type": "range",
+                  "id": "logo_width",
+                  "label": "logo_width",
+                  "default": 100,
+                  "min": 20,
+                  "max": 300,
+                  "step": 5
+                }
+              ],
+                        "presets": [
+                         {
+                       "name": "Header with logo",
+                       "category": "Image"
+                        }
+                                   ]
+            }
+          
+          
+          {% endschema %}
+          
+          {%  javascript  %}
+          document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.querySelector('.header-hamburger');
+    var overlay = document.querySelector('.header-nav-overlay');
+    
+    hamburger.addEventListener('click', function(event) {
+      overlay.classList.toggle('active');
+      event.stopPropagation(); // Prevent the click from being immediately caught by document
+    });
+  
+    document.addEventListener('click', function(event) {
+      var isClickInsideHamburger = hamburger.contains(event.target);
+      var isOverlayActive = overlay.classList.contains('active');
+  
+      if (isOverlayActive && !isClickInsideHamburger) {
+        overlay.classList.remove('active');
       }
-    ]
-  }
-
-
-{% endschema %}
+    });
+  });
+  
+          {% endjavascript %}
