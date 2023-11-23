@@ -28,7 +28,8 @@
     "0a43111d-ce2d-477b-b360-a8439b8901a7": {
       "type": "image-text",
       "settings": {
-        "text-overlay": "Your default text here"
+        "text-overlay": "ITS A WANG THING",
+        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png"
       }
     }
   },
