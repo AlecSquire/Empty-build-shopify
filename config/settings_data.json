@@ -3,19 +3,6 @@
     "page_width": 1300,
     "bg": "radial-gradient(rgba(167, 97, 97, 1), rgba(0, 0, 0, 1) 100%)",
     "body_text": "#995757",
-    "color_schemes": {
-      "text": "#121212",
-      "background": "#FFFFFF",
-      "background_gradient": "linear-gradient(#FFFFFF, #000000)",
-      "primary_button": "#121212",
-      "on_primary_button": "#FFFFFF",
-      "primary_button_border": "#121212",
-      "secondary_button": "#FFFFFF",
-      "on_secondary_button": "#121212",
-      "secondary_button_border": "#FFFFFF",
-      "icons": "#FFFFFF",
-      "links": "#121212"
-    },
     "sections": {
       "header": {
         "type": "header",
