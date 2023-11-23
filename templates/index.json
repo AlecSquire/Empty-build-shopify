@@ -11,10 +11,28 @@
       "type": "index",
       "settings": {
       }
+    },
+    "e0168d3b-d0a4-4122-9018-c1994b4e9f39": {
+      "type": "image-text",
+      "blocks": {
+        "102106be-1557-4146-b0b1-ec8e2639b2d4": {
+          "type": "image_block",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "102106be-1557-4146-b0b1-ec8e2639b2d4"
+      ],
+      "settings": {
+        "text-overlay": "make her feel good this summer!",
+        "image_with_text_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg"
+      }
     }
   },
   "order": [
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
-    "main"
+    "main",
+    "e0168d3b-d0a4-4122-9018-c1994b4e9f39"
   ]
 }
