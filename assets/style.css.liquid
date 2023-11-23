@@ -6,10 +6,10 @@
   --backgroundColor: {{ settings.background_color }};
   --textColor: {{ settings.textColor }};
   --linkColor: {{ settings.linkColor }};
-  /* color scheme 
   color: {{ section.settings.color_schemes.text }};
-  background-color: {{ section.settings.color_schemes.background }} */
+  background-color: {{ section.settings.color_schemes.background }} 
 }
+
 .width {
   max-width: var(--page_width);
   width: calc(100% - 40px);
@@ -50,6 +50,7 @@ header {
 .header-hamburger {
   width: 32px;
   display: block;
+  margin: 0 auto;
 }
 
 .header-hamburger-bar {
@@ -60,8 +61,8 @@ header {
   border-radius:2px;
 }
 
-& + & {
-  margin-top:5px;
+.header-hamburger-bar + .header-hamburger-bar {
+  margin-top: 5px;
 }
 
 button,
@@ -94,10 +95,58 @@ body {
   background: var(--backgroundColor);
   color: var(--textColor);
 }
-.image_with_text_image .overlay-text {
+.image_with_text_image  {
+  position: relative; 
+  text-align: center; 
+  z-index: 3;
+}
+.image_with_text_image .text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; 
+  z-index: 5;
 }
+.header-nav-overlay.active {
+  display: block; /* Show when active */
+}
+.header-flex {
+  display: flex;
+  justify-content:space-between;
+  align-content:center;
+}
+.header-nav-overlay {
+  display: none;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: rgba(0,0,0,0.7);
+  }
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background: var(--bg);
+  width: 90%;
+  max-width: 300px;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: 0.4s transform; 
+}
+.header-nav-item {
+  border-bottom: 1px solid black ;
+}
+.header-nav-anchor {
+  display: block; 
+  padding:20px;
+  color: var(--textColor);
+}
+
+
+
+
