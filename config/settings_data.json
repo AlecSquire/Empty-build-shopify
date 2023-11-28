@@ -4,22 +4,24 @@
     "background_color": "#ffffff",
     "textColor": "#151212",
     "linkColor": "#000000",
-    "menu": "main-menu",
     "checkout_header_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg",
     "checkout_logo_image": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
     "checkout_body_background_color": "#fff1f1",
+    "menu": "main-menu",
     "bg": "radial-gradient(rgba(167, 97, 97, 1), rgba(0, 0, 0, 1) 100%)",
     "body_text": "#995757",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
+          "logo": "shopify:\/\/shop_images\/DALL_E_2023-11-21_13.00.44_-_A_modern_and_stylish_logo_for_a_clothing_website_named__BKYLN_._The_logo_should_feature_bold_and_contemporary_typography_with_an_urban__chic_aesthetic-rem.png",
           "logo_width": 30
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "platform_customizations": {
     "custom_css": [
