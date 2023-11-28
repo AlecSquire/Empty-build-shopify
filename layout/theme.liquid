@@ -1,23 +1,57 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    {{ content_for_header }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.background_color }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link
+        rel="icon"
+        type="image/png"
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link
+        rel="preconnect"
+        href="https://fonts.shopifycdn.com"
+        crossorigin>
+    {%- endunless -%}
+
+    <title>{{ page_title }} - {{ shop.name }}</title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
     <link
-      rel='stylesheet'
-      type='text/css'
-      media='screen'
-      href='{{ 'style.css' | asset_url }}'>
+      rel="stylesheet"
+      type="text/css"
+      href="{{ 'header.css.liquid' | asset_url }}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ 'style.css' | asset_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Young+Serif&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    {{ content_for_layout }}
+
+    {{ content_for_header }}
+
     <style>
+    /* ... Your internal CSS ... */
+  </style>
 
-    </style>
+<!-- Additional Scripts if any -->
+</head>
+<body>
 
-  </body>
-</html>
+  {{ content_for_layout }}
+
+<!-- Additional Scripts if any -->
+</body></html>

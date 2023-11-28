@@ -19,20 +19,26 @@
       {
         "type": "color",
         "id": "background_color",
-        "default": "#ffffff",
+        "default": "#FFF1F1",
         "label": "Background color"
       },
       {
         "type": "color",
         "id": "textColor",
         "label": "Text color",
-        "default": "#121212"
+        "default": "#E0E0E0"
       },
       {
         "type": "color",
         "id": "linkColor",
         "label": "Link color",
         "default": "#121212"
+      },
+      {
+        "type": "color",
+        "id": "footer-background-color",
+        "label": "Footer background color",
+        "default": "#DCC0E6"
       }
     ]
   },
@@ -57,7 +63,7 @@
             "type": "color",
             "id": "text",
             "label": "Text",
-            "default": "#121212"
+            "default": "#606060"
           },
           {
             "type": "header",
@@ -84,49 +90,49 @@
             "type": "color",
             "id": "primary_button",
             "label": "Primary Button",
-            "default": "#121212"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "on_primary_button",
             "label": "On Primary Button",
-            "default": "#FFFFFF"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "primary_button_border",
             "label": "Primary Button Border",
-            "default": "#121212"
+            "default": "#606063"
           },
           {
             "type": "color",
             "id": "secondary_button",
             "label": "Secondary Button",
-            "default": "#FFFFFF"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "on_secondary_button",
             "label": "On Secondary Button",
-            "default": "#121212"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "secondary_button_border",
             "label": "Secondary Button Border",
-            "default": "#FFFFFF"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "icons",
             "label": "Icons",
-            "default": "#FFFFFF"
+            "default": "#606060"
           },
           {
             "type": "color",
             "id": "links",
             "label": "Links",
-            "default": "#121212"
+            "default": "#606060"
           }
         ],
         "role": {

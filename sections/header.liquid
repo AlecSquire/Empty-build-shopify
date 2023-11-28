@@ -26,9 +26,9 @@
   <div class="header-nav-overlay"></div>
 <style> 
   .header-logo img {
-              display: block; /* Adjusted from flex to block */
+              display: block; 
               max-width: {{ section.settings.logo_width }}px;
-              height: auto; /* To maintain
+              height: auto; 
             }
     </style>
 
@@ -59,29 +59,7 @@
                        "category": "Image"
                         }
                                    ]
-            }
+          }
           
           
           {% endschema %}
-          
-          {%  javascript  %}
-          document.addEventListener('DOMContentLoaded', function () {
-    var hamburger = document.querySelector('.header-hamburger');
-    var overlay = document.querySelector('.header-nav-overlay');
-    
-    hamburger.addEventListener('click', function(event) {
-      overlay.classList.toggle('active');
-      event.stopPropagation(); // Prevent the click from being immediately caught by document
-    });
-  
-    document.addEventListener('click', function(event) {
-      var isClickInsideHamburger = hamburger.contains(event.target);
-      var isOverlayActive = overlay.classList.contains('active');
-  
-      if (isOverlayActive && !isClickInsideHamburger) {
-        overlay.classList.remove('active');
-      }
-    });
-  });
-  
-          {% endjavascript %}

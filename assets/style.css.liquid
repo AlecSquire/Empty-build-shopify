@@ -4,15 +4,24 @@
   --bp:960px;
   --page_width: {{ settings.page_width }}px;
   --backgroundColor: {{ settings.background_color }};
-  --textColor: {{ settings.textColor }};
+  --textColor: {{ settings.textColor }}; 
   --linkColor: {{ settings.linkColor }};
   color: {{ section.settings.color_schemes.text }};
   background-color: {{ section.settings.color_schemes.background }} 
 }
+/* 
+Light Pink (#FFF1F1)
+Warm Gray (#E0E0E0)
+Charcoal Gray (#606060)
+Vibrant Coral (#FF6E6E)
+lighter-purple #DCC0E6
+dark purple #C8A2C8
+*/
 
 .width {
   max-width: var(--page_width);
   width: calc(100% - 40px);
+  
 
 }
 /*
@@ -77,7 +86,7 @@ textarea {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-}
+} 
 
 a {
   color: var(--linkColor);
@@ -90,14 +99,14 @@ a:hover {
   color: #fff;
 }
 
-body {
-  font-size:100%;
+ body {
   background: var(--backgroundColor);
   color: var(--textColor);
-}
+} 
 .image_with_text_image  {
-  position: relative; 
-  text-align: center; 
+  display: flex;
+  justify-content:space-between;
+  align-content:center;
   z-index: 3;
 }
 .image_with_text_image .text-overlay {
@@ -141,12 +150,23 @@ body {
 .header-nav-item {
   border-bottom: 1px solid black ;
 }
+li {
+  list-style: none;
+}
 .header-nav-anchor {
   display: block; 
   padding:20px;
   color: var(--textColor);
 }
 
+.para-color, a {
+  color: {{ section.settings.body_text }} !important;
+}
 
+h1 h2 h3 {
+   text-transform: uppercase; 
+   letter-spacing:1px;
+   font-weight:400;
+   margin-bottom: 20px;
 
-
+}

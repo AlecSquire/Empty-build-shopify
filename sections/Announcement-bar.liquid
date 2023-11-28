@@ -1,0 +1,97 @@
+  <div class="announcement-container font_size_announcement announcement-background-color">
+    <h3 class="heading_text">
+      {{ section.settings.footer_linklist_title }}
+    </h3>
+      <p class="para-color">
+      {{ section.settings.paragraph }}</p>
+  </div>
+
+  {% style %}
+
+  .heading_text {
+    font-family: {{ section.settings.heading_font.family }};
+  }
+  .font_size_announcement {
+    font-size: {{ section.settings.font_size_announcement }};
+  }
+  .heading_text {
+    color: {{ section.settings.heading_text }};
+  }
+  .para-color {
+  text-decoration-color: {{ section.settings.body_text }} !important;
+  color: {{ section.settings.body_text }} !important;
+  }
+  .announcement-background-color {
+    background-color: {{ section.settings.announcement-background-color }};
+  }
+  .announcement-container {
+    width: 100%;
+    text-align: {{ section.settings.alignment }};
+  }
+
+  {% endstyle %}
+
+  {% schema %}
+    {
+      "name": "Announcement bar",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_linklist_title",
+          "label": "Heading",
+          "default": "This bar is used for short important announcements!"
+        },
+        {
+          "type": "font_picker",
+          "id": "heading_font",
+          "label": "Heading font",
+          "default": "helvetica_n4"
+        },
+        {
+          "type": "color",
+          "id": "body_text",
+          "label": "Paragraph text",
+          "default": "#555759"
+        },
+        {
+          "type": "color",
+          "id": "heading_text",
+          "label": "Heading text",
+          "default": "#2d3032"
+        },
+        {
+          "type": "color",
+          "id": "announcement-background-color",
+          "label": "Background color",
+          "default": "#C8A2C8"
+        },
+        {
+          "type": "text_alignment",
+          "id": "alignment",
+          "label": "Text alignment",
+          "default": "center"
+        }, 
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "<p>Add links or other text here</p>"
+        },
+        {
+          "type": "range",
+          "id": "font_size_announcement",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size",
+          "default": 16
+        }
+      ],
+      "presets": [
+        {
+          "name": "Announcement bar"
+        }
+      ]
+    }
+  {% endschema %}

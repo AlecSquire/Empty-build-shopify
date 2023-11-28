@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "new-footer",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
