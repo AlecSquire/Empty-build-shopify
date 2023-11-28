@@ -1,12 +1,5 @@
 {
   "sections": {
-    "0a43111d-ce2d-477b-b360-a8439b8901a7": {
-      "type": "image-text",
-      "settings": {
-        "text-overlay": "ITS A WANG THING",
-        "image_with_text_image": "shopify:\/\/shop_images\/abi_hero.png"
-      }
-    },
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c": {
       "type": "header",
       "settings": {
@@ -23,21 +16,54 @@
       "type": "image-text",
       "settings": {
         "text-overlay": "make her feel good this summer!",
-        "image_with_text_image": "shopify:\/\/shop_images\/model-laughs-barefoot.jpg"
+        "image_with_text_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
       }
     },
-    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790": {
-      "type": "header-custom",
+    "5a71b604-8a1d-4903-a1ab-4d05ea42ab05": {
+      "type": "new-footer",
+      "blocks": {
+        "f7f9e6a2-7e12-4304-9fa9-3866ea1255c4": {
+          "type": "navigation",
+          "settings": {
+            "menu_footer": "main-menu"
+          }
+        },
+        "588d56db-719c-4853-ad22-8f2ceab8f335": {
+          "type": "richtext",
+          "settings": {
+            "title_footer": "Our mission",
+            "text_content_footer": "Striving for minimal environmental impact, we continuously work on reducing waste and conserving resources. Our packaging is recyclable, and we encourage our customers to join us in this green initiative."
+          }
+        },
+        "1361d488-3880-4a57-969b-73ec10db4caa": {
+          "type": "Newsletter",
+          "settings": {
+            "newsletter_title": "Stay Updated",
+            "newsletter_description": "Subscribe to receive the latest updates, special offers, and exclusive news."
+          }
+        },
+        "389c552b-64e7-4976-8944-228680975fdf": {
+          "type": "navigation",
+          "settings": {
+            "menu_footer": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "f7f9e6a2-7e12-4304-9fa9-3866ea1255c4",
+        "588d56db-719c-4853-ad22-8f2ceab8f335",
+        "1361d488-3880-4a57-969b-73ec10db4caa",
+        "389c552b-64e7-4976-8944-228680975fdf"
+      ],
       "settings": {
-        "menu": "main-menu"
+        "copyright": "© 2023 - BKLN \/ Powered by Shopify"
       }
     }
   },
   "order": [
-    "0a43111d-ce2d-477b-b360-a8439b8901a7",
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
     "main",
     "e0168d3b-d0a4-4122-9018-c1994b4e9f39",
-    "3357f7d1-7c89-43b2-a6f0-d6c21b73b790"
+    "5a71b604-8a1d-4903-a1ab-4d05ea42ab05"
   ]
 }
