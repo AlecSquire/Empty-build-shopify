@@ -1,9 +1,35 @@
-{% for collection in collections %}
+{% style %}
+ .collection-text-container {
+    max-height: 20%;
+ }
+
+  .container-him-her {
+    display: flex;
+    height: 100vh; /* 100% of the viewport height */
+  }
+
+  .collection-item {
+    width: 50%; /* Each item takes up half the width */
+    height: 100%; /* Full height of the container */
+    border: 1px solid grey;
+    box-sizing: border-box;
+    overflow: hidden; /* In case the content exceeds the item's height */
+  }
+
+  .collection-item img {
+    width: 100%; /* Image takes the full width of the item */
+    height: auto; /* Maintain aspect ratio */
+  }
+{% endstyle %}
+
+<div class="container-him-her">
+  {% for collection in collections %}
     <a href="{{ collection.url }}" class="collection-item">
-        <h1>{{ collection.title }}</h1>
-        <p>{{ collection.description }}</p>
-        <img src="{{ collection.image.src | img_url: '300x300' }}" alt="{{ collection.title | escape }}">
-        </a>
-      
-    </div>
+        <div class="collection-text-container"> 
+      <h1>{{ collection.title }}</h1>
+      <p>{{ collection.description }}</p>
+      </div>
+      <img src="{{ collection.image.src | img_url: '1000x1000' }}" alt="{{ collection.title | escape }}">
+    </a>
   {% endfor %}
+</div>

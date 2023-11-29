@@ -1,0 +1,244 @@
+{% style %}
+  .hero_image_container {
+    max-width: 3000px;
+    width: 100%;
+    z-index: 1;
+    text-align: {{ section.settings.hero_text_alignment }};
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .text-container {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .heading-hero,
+  .para-hero {
+    z-index: 3;
+    font-size: {{ section.settings.font_size_hero }};
+  }
+  .heading-hero {
+  
+  }
+  .para-hero {
+  
+  }
+
+  .hero_button_link,
+  .hero_button_label, 
+  .hero-button {
+    z-index: 2;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: dotted dashed solid double;
+    background-color: {{ block.settings.hero_button_background }};
+    text-align: {{ block.settings.button_alignment }};
+  }
+
+  h1, h2, h3 {
+   text-transform: uppercase; 
+   letter-spacing:1px;
+   font-weight:400;
+   margin-bottom: 20px;
+}
+{% endstyle %}
+
+{% if section.settings.hero_image != blank %}
+  <div class="hero_image_container"> 
+    <img
+      src="{{ section.settings.hero_image | img_url: '3000X3000'}}"
+      alt=""
+      class="hero-image">
+    <div class="text-container">
+      <h2 class="heading-hero"> {{ section.settings.hero_title }}</h2>
+      <div class="para-hero" {{ section.settings.para_hero }}></div>
+    </div>
+  </div>
+{% endif %}
+  {% for block in section.blocks %}
+    {% if block.type == 'button' %}
+      <div style="text-align: {{ block.settings.button_alignment }};">
+      <a href="{{ block.settings.hero_button_link }}" class="hero-button">
+        {{ block.settings.hero_button_label }}
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
+
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero section",
+    "tag": "header",
+    "class": "hero-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "hero_text_alignment",
+        "label": "Text Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "sections.image-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "top-center",
+          "label": "sections.image-banner.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "top-right",
+          "label": "sections.image-banner.settings.desktop_content_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "sections.image-banner.settings.desktop_content_position.options__5.label"
+        },
+        {
+          "value": "middle-right",
+          "label": "sections.image-banner.settings.desktop_content_position.options__6.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "sections.image-banner.settings.desktop_content_position.options__7.label"
+        },
+        {
+          "value": "bottom-center",
+          "label": "sections.image-banner.settings.desktop_content_position.options__8.label"
+        },
+        {
+          "value": "bottom-right",
+          "label": "sections.image-banner.settings.desktop_content_position.options__9.label"
+        }
+      ],
+      "default": "middle-center",
+      "label": "sections.image-banner.settings.desktop_content_position.label"
+    },
+      {
+        "type": "range",
+        "id": "font_size_hero",
+        "min": 2,
+        "max": 84,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      }
+    ],
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "select",
+            "id": "button_alignment",
+            "label": "Text Alignment",
+            "default": "center",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "hero_button_label",
+            "label": "Button Label",
+            "default": "Click Here"
+          },
+          {
+            "type": "url",
+            "id": "hero_button_link",
+            "label": "Button Link",
+            "default": "/collections/all"
+          }
+          /* Uncomment and correct this part if needed
+          {
+            "type": "color_background",
+            "id": "hero_button_background",
+            "label": "Background color",
+            "default": "rgba(255, 255, 255, 0)"
+          }
+          */
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Hero title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "hero_title",
+            "label": "Heading",
+            "default": "Image banner"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Hero description",
+        "settings": [
+          {
+            "type": "text",
+            "id": "hero_description",
+            "label": "Description",
+            "default": "Give customers details about the banner image(s) or content on the template."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section",
+        "category": "Image"
+      }
+    ]
+  }
+  {% endschema %}

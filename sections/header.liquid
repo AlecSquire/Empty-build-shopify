@@ -1,3 +1,46 @@
+{% style %}
+  header-nav-overlay.active {
+  display: block; /* Show when active */
+}
+.header-flex {
+  display: flex;
+  justify-content:space-between;
+  align-content:center;
+}
+.header-nav-overlay {
+  display: none;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: rgba(0,0,0,0.7);
+  }
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background: var(--bg);
+  width: 90%;
+  max-width: 300px;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: 0.4s transform; 
+}
+.header-nav-item {
+  border-bottom: 1px solid black ;
+}
+li {
+  list-style: none;
+}
+.header-nav-anchor {
+  display: block; 
+  padding:20px;
+  color: var(--textColor);
+}
+{% endstyle %}
 <div class="width">
   <div class="header-flex">
     <a href="/" class="header-logo">

@@ -6,9 +6,9 @@
           <div class="footer-column footer-column--nav">
             <h2>{{ block.settings.menu_footer.title }}</h2>
             {% for link in block.settings.menu_footer.links %}
-              <li>
-                <a href="{{ link.url }}">{{ link.title }}</a>
-              </li>
+              <ul>
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              </ul>
             {% endfor %}
           </div>
         {% elsif block.type == 'richtext' %}
@@ -20,17 +20,27 @@
           <div class="footer-column footer-column--newsletter">
             <h2>{{ block.settings.newsletter_title }}</h2>
             {{ block.settings.newsletter_description }}
-            {% form 'customer', id: 'footer-newsletter' %}
+            {% form 'customer'
+              , id: 'footer-newsletter' %}
               {% if form.posted_successfully? %}
-                <p> You've been subscribed!</p>
+                <p>
+                  You've been subscribed!</p>
               {% endif %}
 
               {% if form.errors %}
-                <p>{{ form.errors.messages.email }}</p>
+                <p class="error-message">{{ form.errors | first }}</p>
               {% endif %}
 
-              <input type="hidden"  name="contact [tags]" value="newsletter">
-              <input name="contact[email]" type="email" placeholder="Email address">
+              <input
+                type="hidden"
+                name="contact[tags]"
+                value="newsletter">
+              <input
+                type="email"
+                name="contact[email]"
+                id="newsletter-email"
+                placeholder="Enter your email address"
+                required>
               <button type="submit">Subscribe</button>
             {% endform %}
           </div>
@@ -53,7 +63,7 @@
       </ul>
     </div>
   </div>
-  
+
 </footer>
 
 {% style %}
@@ -118,7 +128,14 @@
     line-height: 50px;
     appearance: none;
     outline: none;
+    
+    h1 h2 h3 {
+   text-transform: uppercase; 
+   letter-spacing:1px;
+   font-weight:400;
+   margin-bottom: 20px;
 
+}
 
   }
 
@@ -157,7 +174,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
   }
 
   .footer-copyright {

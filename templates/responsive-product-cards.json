@@ -1,0 +1,13 @@
+{
+    "sections": {
+      "main": {
+        "type": "responsive-product-cards",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }
+  
