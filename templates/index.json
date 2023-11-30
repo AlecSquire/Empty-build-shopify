@@ -52,10 +52,10 @@
         "copyright": "© 2023 - BKLN \/ Powered by Shopify"
       }
     },
-    "58aabca9-5613-4d22-949f-00ff5b6fecfb": {
+    "b58e3f54-3bd6-461a-838f-8383417bde47": {
       "type": "hero",
       "blocks": {
-        "8bf8e774-a1a7-4e25-9571-8155060118af": {
+        "b724e93f-6f7e-4859-9e2b-2417dfe7676a": {
           "type": "button",
           "settings": {
             "button_alignment": "center",
@@ -63,13 +63,13 @@
             "hero_button_link": "shopify:\/\/collections\/all"
           }
         },
-        "cded7e10-32c6-48d7-8c82-3674d8a882a9": {
+        "6bb33178-3ee2-45cb-b6f8-cbd8dbf2ef07": {
           "type": "text",
           "settings": {
             "hero_title": "Image banner"
           }
         },
-        "908f0203-d9da-4207-a8ce-39c265c8c061": {
+        "a69ebd49-6660-4fe0-95d9-529f1c2c1e1d": {
           "type": "rich_text",
           "settings": {
             "hero_description": "Give customers details about the banner image(s) or content on the template."
@@ -77,19 +77,20 @@
         }
       },
       "block_order": [
-        "8bf8e774-a1a7-4e25-9571-8155060118af",
-        "cded7e10-32c6-48d7-8c82-3674d8a882a9",
-        "908f0203-d9da-4207-a8ce-39c265c8c061"
+        "b724e93f-6f7e-4859-9e2b-2417dfe7676a",
+        "6bb33178-3ee2-45cb-b6f8-cbd8dbf2ef07",
+        "a69ebd49-6660-4fe0-95d9-529f1c2c1e1d"
       ],
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
-        "hero_text_alignment": "center",
+        "hero_image": "shopify:\/\/shop_images\/abi_hero.png",
+        "hero_text_alignment": "right",
         "hero_text_color": "#555759",
-        "hero_heading_color": "#2d3032",
+        "hero_heading_color": "#1773b0",
         "hero_background_color": "#C8A2C8",
         "desktop_position": "middle-center",
-        "font_size_hero": 2,
-        "font_size_para": 1
+        "font_size_hero": 1,
+        "font_size_para": 1,
+        "font_size_button": 0.6
       }
     }
   },
@@ -97,6 +98,6 @@
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
     "main",
     "5a71b604-8a1d-4903-a1ab-4d05ea42ab05",
-    "58aabca9-5613-4d22-949f-00ff5b6fecfb"
+    "b58e3f54-3bd6-461a-838f-8383417bde47"
   ]
 }
