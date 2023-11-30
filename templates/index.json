@@ -12,13 +12,6 @@
       "settings": {
       }
     },
-    "e0168d3b-d0a4-4122-9018-c1994b4e9f39": {
-      "type": "image-text",
-      "settings": {
-        "text-overlay": "make her feel good this summer!",
-        "image_with_text_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
-      }
-    },
     "5a71b604-8a1d-4903-a1ab-4d05ea42ab05": {
       "type": "new-footer",
       "blocks": {
@@ -58,12 +51,52 @@
       "settings": {
         "copyright": "© 2023 - BKLN \/ Powered by Shopify"
       }
+    },
+    "58aabca9-5613-4d22-949f-00ff5b6fecfb": {
+      "type": "hero",
+      "blocks": {
+        "8bf8e774-a1a7-4e25-9571-8155060118af": {
+          "type": "button",
+          "settings": {
+            "button_alignment": "center",
+            "hero_button_label": "Click Here",
+            "hero_button_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "cded7e10-32c6-48d7-8c82-3674d8a882a9": {
+          "type": "text",
+          "settings": {
+            "hero_title": "Image banner"
+          }
+        },
+        "908f0203-d9da-4207-a8ce-39c265c8c061": {
+          "type": "rich_text",
+          "settings": {
+            "hero_description": "Give customers details about the banner image(s) or content on the template."
+          }
+        }
+      },
+      "block_order": [
+        "8bf8e774-a1a7-4e25-9571-8155060118af",
+        "cded7e10-32c6-48d7-8c82-3674d8a882a9",
+        "908f0203-d9da-4207-a8ce-39c265c8c061"
+      ],
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+        "hero_text_alignment": "center",
+        "hero_text_color": "#555759",
+        "hero_heading_color": "#2d3032",
+        "hero_background_color": "#C8A2C8",
+        "desktop_position": "middle-center",
+        "font_size_hero": 2,
+        "font_size_para": 1
+      }
     }
   },
   "order": [
     "2fe634b0-45f5-4b6d-9808-14ccfd33638c",
     "main",
-    "e0168d3b-d0a4-4122-9018-c1994b4e9f39",
-    "5a71b604-8a1d-4903-a1ab-4d05ea42ab05"
+    "5a71b604-8a1d-4903-a1ab-4d05ea42ab05",
+    "58aabca9-5613-4d22-949f-00ff5b6fecfb"
   ]
 }
