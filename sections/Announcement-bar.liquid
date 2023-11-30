@@ -1,7 +1,8 @@
+
   <div class="announcement-container font_size_announcement announcement-background-color">
-    <h3 class="heading_text">
-      {{ section.settings.footer_linklist_title }}
-    </h3>
+    <h4 class="heading_text">
+      {{ section.settings.announcement_title }}
+    </h4>
       <p class="para-color">
       {{ section.settings.paragraph }}</p>
   </div>
@@ -12,7 +13,8 @@
     font-family: {{ section.settings.heading_font.family }};
   }
   .font_size_announcement {
-    font-size: {{ section.settings.font_size_announcement }};
+    font-size: {{ section.settings.font_size_announcement | append: 'em' }}; 
+    max-width:100vw;
   }
   .heading_text {
     color: {{ section.settings.heading_text }};
@@ -37,7 +39,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "footer_linklist_title",
+          "id": "announcement_title",
           "label": "Heading",
           "default": "This bar is used for short important announcements!"
         },
@@ -80,12 +82,12 @@
         {
           "type": "range",
           "id": "font_size_announcement",
-          "min": 12,
-          "max": 24,
-          "step": 1,
-          "unit": "px",
+          "min": 0.1,
+          "max": 2.6,
+          "step": 0.2,
+          "unit": "em",
           "label": "Font size",
-          "default": 16
+          "default": 1
         }
       ],
       "presets": [

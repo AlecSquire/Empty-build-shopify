@@ -1,79 +1,101 @@
+{% javascript %}
+  let button = document.querySelector('button'); 
+  button.addEventListener()
+{% endjavascript %}
+
 {% style %}
   .hero_image_container {
-    max-width: 3000px;
-    width: 100%;
-    z-index: 1;
-    text-align: {{ section.settings.hero_text_alignment }};
+    display: flex;
+  justify-content: center; /* Align horizontally */
+  flex-direction:column;
+  align-items: center; /* Align vertically */
+  max-width: 3000px;
+  width: 100%;
+  z-index: 1;
+  text-align: {{ section.settings.hero_text_alignment }};
+  background-color: {{ section.settings.hero_background_color }};
   }
   .hero-image {
     width: 100%;
   }
   .text-container {
+    font-size: {{ section.settings.font_size_hero | append: 'em' }};
     z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-  .heading-hero,
-  .para-hero {
-    z-index: 3;
-    font-size: {{ section.settings.font_size_hero }};
-  }
-  .heading-hero {
-  
-  }
-  .para-hero {
+  position: absolute;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   
   }
 
+  .heading-hero,
+  .para-hero {
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    text-align: {{ section.settings.hero_text_alignment }};
+  }
+  .heading-hero {
+    color:{{ section.settings.hero_heading_color }};
+  
+    font-size: {{ section.settings.font_size_hero | append: 'em' }};
+  }
+  .para-hero {
+    color: {{ section.settings.hero_text_color }}; 
+    font-size: {{ section.settings.font_size_para | append: 'em' }};
+    ont-weight:400;
+    padding-right: 60px;
+  padding-left: 60px;
+  
+   
+}
+   
+  
   .hero_button_link,
   .hero_button_label, 
+  .buttons-container,
   .hero-button {
     z-index: 2;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
     border: dotted dashed solid double;
     background-color: {{ block.settings.hero_button_background }};
     text-align: {{ block.settings.button_alignment }};
+    
   }
-
   h1, h2, h3 {
-   text-transform: uppercase; 
-   letter-spacing:1px;
-   font-weight:400;
-   margin-bottom: 20px;
-}
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    
+  }
 {% endstyle %}
-
 {% if section.settings.hero_image != blank %}
   <div class="hero_image_container"> 
-    <img
-      src="{{ section.settings.hero_image | img_url: '3000X3000'}}"
-      alt=""
-      class="hero-image">
+    <img src="{{ section.settings.hero_image | img_url: '3000X3000'}}" alt="hero-image" class="hero-image">
+    
     <div class="text-container">
-      <h2 class="heading-hero"> {{ section.settings.hero_title }}</h2>
-      <div class="para-hero" {{ section.settings.para_hero }}></div>
+      {% for block in section.blocks %}
+        {% if block.type == 'text' %}
+          <h2 class="heading-hero">{{ block.settings.hero_title }}</h2>
+        {% elsif block.type == 'rich_text' %}
+          <p class="para-hero">{{ block.settings.hero_description }}</p>
+        {% endif %}
+      {% endfor %}
+    
+      <div class="buttons-container">
+    {% for block in section.blocks %}
+      {% if block.type == 'button' %}
+        <div class="hero-button" style="text-align: {{ block.settings.button_alignment }};">
+          <a href="{{ block.settings.hero_button_link }}">
+            {{ block.settings.hero_button_label }}
+          </a>
     </div>
-  </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div> 
+     </div>
 {% endif %}
-  {% for block in section.blocks %}
-    {% if block.type == 'button' %}
-      <div style="text-align: {{ block.settings.button_alignment }};">
-      <a href="{{ block.settings.hero_button_link }}" class="hero-button">
-        {{ block.settings.hero_button_label }}
-      </a>
-    </div>
-  {% endif %}
-{% endfor %}
-
-</div>
-</div>
 
 {% schema %}
   {
@@ -104,64 +126,92 @@
             "value": "right",
             "label": "Right"
           }
-        ]
+        ] 
       },
       {
-      "type": "select",
-      "id": "desktop_content_position",
-      "options": [
-        {
-          "value": "top-left",
-          "label": "sections.image-banner.settings.desktop_content_position.options__1.label"
+          "type": "color",
+          "id": "hero_text_color",
+          "label": "Paragraph text",
+          "default": "#555759"
         },
         {
-          "value": "top-center",
-          "label": "sections.image-banner.settings.desktop_content_position.options__2.label"
+          "type": "color",
+          "id": "hero_heading_color",
+          "label": "Heading text",
+          "default": "#2d3032"
         },
         {
-          "value": "top-right",
-          "label": "sections.image-banner.settings.desktop_content_position.options__3.label"
+          "type": "color",
+          "id": "hero_background_color",
+          "label": "Background color",
+          "default": "#C8A2C8"
         },
-        {
-          "value": "middle-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
-        },
-        {
-          "value": "middle-center",
-          "label": "sections.image-banner.settings.desktop_content_position.options__5.label"
-        },
-        {
-          "value": "middle-right",
-          "label": "sections.image-banner.settings.desktop_content_position.options__6.label"
-        },
-        {
-          "value": "bottom-left",
-          "label": "sections.image-banner.settings.desktop_content_position.options__7.label"
-        },
-        {
-          "value": "bottom-center",
-          "label": "sections.image-banner.settings.desktop_content_position.options__8.label"
-        },
-        {
-          "value": "bottom-right",
-          "label": "sections.image-banner.settings.desktop_content_position.options__9.label"
-        }
-      ],
-      "default": "middle-center",
-      "label": "sections.image-banner.settings.desktop_content_position.label"
-    },
       {
+        "type": "select",
+"id": "desktop_position",
+"options": [
+  {
+    "value": "top-left",
+    "label": "Top Left"
+  },
+  {
+    "value": "top-center",
+    "label": "Top Center"
+  },
+  {
+    "value": "top-right",
+    "label": "Top Right"
+  },
+  {
+    "value": "middle-left",
+    "label": "Middle Left"
+  },
+  {
+    "value": "middle-center",
+    "label": "Middle Center"
+  },
+  {
+    "value": "middle-right",
+    "label": "Middle Right"
+  },
+  {
+    "value": "bottom-left",
+    "label": "Bottom Left"
+  },
+  {
+    "value": "bottom-center",
+    "label": "Bottom Center"
+  },
+  {
+    "value": "bottom-right",
+    "label": "Bottom Right"
+  }
+],
+"default": "middle-center",
+"label": "Content Position"
+    },
+       {
+          "type": "range",
+          "id": "font_size_hero",
+          "min": 1,
+          "max": 3,
+          "step": 0.2,
+          "unit": "em",
+          "label": "Font size",
+          "default": 2
+        },
+        {
         "type": "range",
-        "id": "font_size_hero",
-        "min": 2,
-        "max": 84,
-        "step": 1,
-        "unit": "px",
-        "label": "Font size",
-        "default": 16
-      }
+        "id": "font_size_para",
+          "min": 1,
+          "max": 3,
+          "step": 0.2,
+          "unit": "em",
+          "label": "Font size",
+          "default": 1
+        }
     ],
-    "max_blocks": 3,
+    "max_blocks": 4,
     "blocks": [
       {
         "type": "button",
@@ -199,14 +249,6 @@
             "label": "Button Link",
             "default": "/collections/all"
           }
-          /* Uncomment and correct this part if needed
-          {
-            "type": "color_background",
-            "id": "hero_button_background",
-            "label": "Background color",
-            "default": "rgba(255, 255, 255, 0)"
-          }
-          */
         ]
       },
       {
@@ -222,7 +264,7 @@
         ]
       },
       {
-        "type": "text",
+        "type": "rich_text",
         "name": "Hero description",
         "settings": [
           {

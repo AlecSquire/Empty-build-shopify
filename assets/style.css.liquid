@@ -28,8 +28,6 @@ dark purple #C8A2C8
 reset 
 */
 * {
-  margin:0;
-  padding:0;
   box-sizing:border-box;
 }
 img svg {
@@ -102,6 +100,8 @@ a:hover {
  body {
   background: var(--backgroundColor);
   color: var(--textColor);
+  padding:0;
+  margin:0;
 } 
 
 
@@ -110,7 +110,8 @@ a:hover {
   color: {{ section.settings.body_text }} !important;
 }
 
-h1, h2, h3 {
+h1 {
+/*  h2, h3 { */
    text-transform: uppercase; 
    letter-spacing:1px;
    font-weight:400;
