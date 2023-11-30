@@ -129,9 +129,9 @@
         "hero_heading_color": "#2d3032",
         "hero_background_color": "#C8A2C8",
         "desktop_position": "middle-center",
-        "font_size_hero": 1,
-        "font_size_para": 0.2,
-        "font_size_button": 0.2
+        "font_size_hero": 2.8,
+        "font_size_para": 2.4,
+        "font_size_button": 1.8
       }
     }
   },
