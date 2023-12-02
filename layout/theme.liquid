@@ -40,8 +40,9 @@
       href="https://fonts.gstatic.com"
       crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Young+Serif&display=swap" rel="stylesheet">
-
     {{ content_for_header }}
+    
+  
 
     <style>
     /* ... Your internal CSS ... */
@@ -50,8 +51,11 @@
 <!-- Additional Scripts if any -->
 </head>
 <body>
-
+  {% sections 'header-group' %}
   {{ content_for_layout }}
+  
 
 <!-- Additional Scripts if any -->
+
+{% sections "footer-group" %}
 </body></html>

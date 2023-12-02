@@ -1,7 +1,7 @@
 <div class="product">
       <a href="{{ product.url }}">
-        {{ product.title | link_to: product.url }}
-        {{ product | image_url: width: 200 | image_tag }}
+       <h3>{{ product.title | link_to: product.url }}</h3> 
+       <img  class=""{{ product | image_url: width: 800 | image_tag }} ></img>
         {{ product.title }}
         {{ product.price | money }}
       </a>
