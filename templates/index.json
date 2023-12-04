@@ -21,32 +21,25 @@
           "settings": {
             "hero_title": "Image banner"
           }
-        },
-        "a69ebd49-6660-4fe0-95d9-529f1c2c1e1d": {
-          "type": "rich_text",
-          "settings": {
-            "hero_description": "template."
-          }
         }
       },
       "block_order": [
         "b724e93f-6f7e-4859-9e2b-2417dfe7676a",
-        "6bb33178-3ee2-45cb-b6f8-cbd8dbf2ef07",
-        "a69ebd49-6660-4fe0-95d9-529f1c2c1e1d"
+        "6bb33178-3ee2-45cb-b6f8-cbd8dbf2ef07"
       ],
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/abi_hero.png",
         "hero_text_alignment": "left",
-        "hero_text_color": "#dd1d1d",
-        "hero_heading_color": "#dd1d1d",
+        "hero_text_color": "#151212",
+        "hero_heading_color": "#000000",
         "hero_button_color": "#C8A2C8",
         "image_size": 100,
-        "show_background": true,
+        "show_background": false,
         "hero_background_color": "#c8a2c8",
         "desktop_position": "middle-center",
-        "font_size_hero": 1,
-        "font_size_para": 1,
-        "font_size_button": 0.6
+        "font_size_hero": 3,
+        "font_size_para": 3,
+        "font_size_button": 2
       }
     },
     "cd92adc1-4c88-4573-ba5d-2545999f3f38": {
