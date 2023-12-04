@@ -59,10 +59,28 @@
             "product_slider_title": "",
             "link": ""
           }
+        },
+        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_Image": "shopify:\/\/shop_images\/dark-shirt-mens-fashion.jpg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_Image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
+            "product_slider_title": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "a9c5c22e-2634-4ecd-b379-207dbc032188"
+        "a9c5c22e-2634-4ecd-b379-207dbc032188",
+        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0",
+        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23"
       ],
       "settings": {
       }
