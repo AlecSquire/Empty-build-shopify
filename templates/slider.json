@@ -1,0 +1,13 @@
+{
+    "sections": {
+      "main": {
+        "type": "slider",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }
+  

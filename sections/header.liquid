@@ -1,3 +1,4 @@
+
 {% style %}
   header-nav-overlay.active {
   display: block; /* Show when active */
@@ -44,7 +45,7 @@ li {
 <div class="width">
   <div class="header-flex">
     <a href="/" class="header-logo">
-      <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ site.name }}">
+      {{ section.settings.logo | image_url: width: 200 | image_tag }}
     </a>
 
     <button class="header-hamburger">
@@ -83,9 +84,6 @@ li {
               "class": "header",
               "enabled_on": {
               "groups": ["header"]
-             },
-             "disabled_on": {
-              "groups": ["aside"]
              },
               "settings": [
                 {

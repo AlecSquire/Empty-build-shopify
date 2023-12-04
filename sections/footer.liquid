@@ -79,8 +79,17 @@
       row-gap: 60px;
       column-gap: 40px;
       justify-content: space-between;
-    }
-  }
+ } ul {
+    transform: translateX(-25%)
+  } 
+}
+    
+/*   
+  @media screen (max-width: 759){
+    ul {
+    transform: translateX(-244%)
+  } 
+  } */
 
   @media (min-width: 1040px) {
     .footer-column--text {
@@ -90,6 +99,9 @@
       column-gap: 40px;
       justify-content: space-between;
     }
+    ul {
+    transform: translateX(-25%)
+  } 
     .footer-column--text,
     .footer-column--newsletter {
       max-width: 320px;
@@ -106,6 +118,7 @@
     padding: 60px 0;
     background-color: {{ settings.footer-background-color }}
   }
+
 
 
   .footer-column li + li {

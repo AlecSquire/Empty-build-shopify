@@ -1,11 +1,7 @@
-{% javascript %}
-  let button = document.querySelector('button'); 
-  button.addEventListener()
-{% endjavascript %}
+
 
 {% style %}
-
-  .hero_image_container {
+.hero_image_container-{{ section.id }} {
   display: flex;
   justify-content: center; 
   flex-direction:column;
@@ -13,53 +9,83 @@
   max-width: 3000px;
   width: 100%;
   z-index: 1;
-  background-color: {{ section.settings.hero_background_color }};
+  text-align: {{ section.settings.hero_text_alignment }};
+  background-color: {{ section.settings.hero_background_color}};
   flex-wrap: wrap;
+  width: {{ section.settings.image_size }}%;
+  height: auto;
+  max-width:100%;
   }
   .hero-image {
     width: 100%;
   }
-  .text-container {
+  .text-container-{{ section.id }} {
   z-index: 2;
   position: absolute;
   word-wrap: break-word;
   overflow-wrap: break-word;
   padding-right: 5%;
   padding-left: 5%;
-  
   max-width: 100vw;
   }
+  .text-container-background-{{ section.id }} {
+    z-index: 2;
+  position: absolute;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-right: 5%;
+  padding-left: 5%;
+  max-width: 100vw;
+  opacity: 0.5;
+  border: 1px;
+  border-radius: 3%;
+  }
+  .hero-button-{{ section.id }}:hover {
+  opacity: 1.0;
+}
 
-  .heading-hero,
-  .para-hero {
+  .heading-hero-{{ section.id }},
+  .para-hero-{{ section.id }} {
     z-index: 3;
     justify-content: center;
     align-items: center;
-    text-align: {{ section.settings.hero_text_alignment }};
+
   }
-  .heading-hero {
+  .heading-hero-{{ section.id}} {
     color:{{ section.settings.hero_heading_color }};
-  
     font-size: {{ section.settings.font_size_hero | append: 'em' }};
   }
-  .para-hero {
+  .para-hero-{{ section.id}} {
     color: {{ section.settings.hero_text_color }}; 
     font-size: {{ section.settings.font_size_para | append: 'em' }};
     font-weight:400;
 }
+
+.background-button-{{ section.id }}
+{
+  max-width:100%;
+  dislay:flex; 
+  justify-content:center;
+  z-index:2;
+  opacity: 0.5;
+}
+
   
   .hero_button_link,
   .hero_button_label, 
   .buttons-container,
-  .hero-button {
+  .hero-button-{{ section.id }} {
     z-index: 2;
-    color: white;
     border: dotted dashed solid double;
-    background-color: {{ block.settings.hero_button_background }};
+    color: {{ section.settings.hero_button_color }};
     text-align: {{ block.settings.button_alignment }};
     font-size: {{ section.settings.font_size_button | append: 'em' }};
-    
+    opacity: 0.5;
   }
+  .hero-button-{{ section.id }}:hover {
+  opacity: 1.0;
+}
+
   h1, h2, h3 {
     text-transform: uppercase; 
     letter-spacing: 1px;
@@ -69,32 +95,40 @@
   }
 {% endstyle %}
 {% if section.settings.hero_image != blank %}
-  <div class="hero_image_container"> 
-    <img src="{{ section.settings.hero_image | img_url: '3000X3000'}}" alt="hero-image" class="hero-image">
+  <div class="hero_image_container-{{ section.id }}" style="text-align: {{ section.settings.hero_text_alignment }};"> 
+    <img src="{{ section.settings.hero_image | img_url: '1920x1080'}}" alt="hero-image" class="hero-image">
     
-    <div class="text-container">
+   
+    {% if section.settings.show_background %}
+      <div class="text-container-background-{{ section.id }}" style="background-color: {{ section.settings.hero_background_color }};">    
+      {% else %}
+      <div class="text-container-{{ section.id }}">
+    {% endif %}
+    
       {% for block in section.blocks %}
         {% if block.type == 'text' %}
-          <h2 class="heading-hero">{{ block.settings.hero_title }}</h2>
+          <h2 class="heading-hero-{{ section.id }}">{{ block.settings.hero_title }}</h2>
         {% elsif block.type == 'rich_text' %}
-          <p class="para-hero">{{ block.settings.hero_description }}</p>
+          <p class="para-hero-{{ section.id }}">{{ block.settings.hero_description }}</p>
         {% endif %}
       {% endfor %}
-    
+
       <div class="buttons-container">
-    {% for block in section.blocks %}
-      {% if block.type == 'button' %}
-        <div class="hero-button" style="text-align: {{ block.settings.button_alignment }};">
-          <a href="{{ block.settings.hero_button_link }}">
-            {{ block.settings.hero_button_label }}
-          </a>
-    </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div> 
-     </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'button' %}
+            <div class="hero-button-{{ section.id }}" style="text-align: {{ block.settings.button_alignment }};">
+              <a href="{{ block.settings.hero_button_link }}">
+                {{ block.settings.hero_button_label }}
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div> <!-- Close buttons-container -->
+
+    </div> <!-- Close text-container, whether with background or not -->
+  </div> <!-- Close hero_image_container -->
 {% endif %}
+
 
 {% schema %}
   {
@@ -141,8 +175,30 @@
         },
         {
           "type": "color",
+          "id": "hero_button_color",
+          "label": "Button color",
+          "default": "#C8A2C8"
+        },
+        {
+        "type": "range",
+        "id": "image_size",
+          "min": 10,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "image size",
+          "default": 100
+        },
+        {
+  "type": "checkbox",
+  "id": "show_background",
+  "label": "Show background",
+  "default": true
+},
+{
+          "type": "color",
           "id": "hero_background_color",
-          "label": "Background color",
+          "label": "Button color",
           "default": "#C8A2C8"
         },
       {

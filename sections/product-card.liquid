@@ -1,13 +1,96 @@
-{% javascript %} 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<swiper-container>
-  <swiper-slide>Slide 1</swiper-slide>
-  <swiper-slide>Slide 2</swiper-slide>
-  <swiper-slide>Slide 3</swiper-slide>
-  <swiper-slide>Slide ...</swiper-slide>
-</swiper-container>
- {% endjavascript %} 
 
- overflow:auto;
+{% comment %} {{ 'section-footer-multicolumn.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+{{ 'splide.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+
+<!-- Slider main container -->
+<div class="swiper">
+<!-- Additional required wrapper -->
+{%  for sections in section %}  {% endfor %} %}
+<div class="swiper-slide">
+  <img src="{{ section.settings.product_slider_Image | image_url: '1200x400' }}" alt="">
+</div>
+
+<!-- If we need pagination -->
+<div class="swiper-pagination"></div>
+
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+
+<!-- If we need scrollbar -->
+<div class="swiper-scrollbar"></div>
+</div>
 
  
+ {% javascript %}
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});  
+{% endjavascript %}
+
+
+
+//  overflow:auto;
+
+ 
+{% schema %}
+{
+  "name": "Product slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "multicolumn_section",
+      "name": "Multicolumn Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Select Image",
+          "id": "product_slider_Image"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "product_slider_title"
+        },
+        {
+          "type": "url",
+          "label": "Link",
+          "id": "link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
