@@ -1,5 +1,17 @@
 
 {% style %}
+  .header-logo img {
+ display: block; 
+ max-width: {{ section.settings.logo_width }}px;
+ height: auto; 
+  }
+
+@media screen and (max-width: 600px) {
+  body {
+    color: blue;
+  }
+}
+
   header-nav-overlay.active {
   display: block; /* Show when active */
 }
@@ -48,6 +60,7 @@ li {
       {{ section.settings.logo | image_url: width: 200 | image_tag }}
     </a>
 
+    {%  if section.type  %}  {% endif %} 
     <button class="header-hamburger">
       <a href="/collections/modern-elegance-mens-collection" span class="header-hamburger-bar">Men</span></a> 
       <a href="/collections/timeless-chic-womens-collection" span class="header-hamburger-bar">Woman</span></a> 
@@ -68,13 +81,7 @@ li {
     </ul>
   </div>
   <div class="header-nav-overlay"></div>
-<style> 
-  .header-logo img {
-              display: block; 
-              max-width: {{ section.settings.logo_width }}px;
-              height: auto; 
-            }
-    </style>
+
 
     
           {% schema %}

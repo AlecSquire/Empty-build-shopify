@@ -2,20 +2,18 @@
 
 {% style %}
 .hero_image_container-{{ section.id }} {
-  display: flex;
-  justify-content: center; 
-  flex-direction:column;
-  align-items: center; 
+  margin: 0 auto; /* Horizontally centers the container if it has a set width */
   max-width: 3000px;
-  width: 100%;
-  z-index: 1;
-  text-align: {{ section.settings.hero_text_alignment }};
-  background-color: {{ section.settings.hero_background_color}};
-  flex-wrap: wrap;
   width: {{ section.settings.image_size }}%;
   height: auto;
-  max-width:100%;
-  }
+  text-align: {{ section.settings.hero_text_alignment }};
+  background-color: {{ section.settings.hero_background_color }};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
   .hero-image {
     width: 100%;
   }
@@ -40,9 +38,7 @@
   border: 1px;
   border-radius: 3%;
   }
-  .hero-button-{{ section.id }}:hover {
-  opacity: 1.0;
-}
+
 
   .heading-hero-{{ section.id }},
   .para-hero-{{ section.id }} {
@@ -198,8 +194,8 @@
 {
           "type": "color",
           "id": "hero_background_color",
-          "label": "Button color",
-          "default": "#C8A2C8"
+          "label": "Background color",
+          "default": "#555759"
         },
       {
         "type": "select",
