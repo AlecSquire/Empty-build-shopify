@@ -4,53 +4,9 @@
       "type": "index",
       "settings": {
       }
-    },
-    "cd32a1e0-3f95-4387-94ad-1c395cf5d670": {
-      "type": "product-card",
-      "blocks": {
-        "67fa0dcb-678a-4b51-a4e6-b9f2bbcd4135": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/redbull-logo-svgrepo-com.svg",
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "7ffd97f1-0716-4827-b15f-54fbb871767c": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "196426ca-80dd-4d0a-9d79-ecb0199acbe0": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "e1b61fc3-7de3-4217-9edb-f7446d43b17a": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_title": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "67fa0dcb-678a-4b51-a4e6-b9f2bbcd4135",
-        "7ffd97f1-0716-4827-b15f-54fbb871767c",
-        "196426ca-80dd-4d0a-9d79-ecb0199acbe0",
-        "e1b61fc3-7de3-4217-9edb-f7446d43b17a"
-      ],
-      "settings": {
-        "image_size_slider": 50
-      }
     }
   },
   "order": [
-    "main",
-    "cd32a1e0-3f95-4387-94ad-1c395cf5d670"
+    "main"
   ]
 }
