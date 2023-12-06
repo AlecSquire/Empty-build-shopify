@@ -1,9 +1,18 @@
 
+.swiper-slide img {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row;
+
+}
 
 
   
-  .swiper-slide {
-    object-fit: cover;
+  .swiper-slide, img {
+   
+
+
   }
   
   .swiper-button-next, .swiper-button-prev {

@@ -1,71 +1,20 @@
-
+{{ 'header.css' | asset_url | stylesheet_tag }}
 {% style %}
   .header-logo img {
  display: block; 
  max-width: {{ section.settings.logo_width }}px;
  height: auto; 
   }
-
-@media screen and (max-width: 600px) {
-  body {
-    color: blue;
-  }
-}
-
-  header-nav-overlay.active {
-  display: block; /* Show when active */
-}
-.header-flex {
-  display: flex;
-  justify-content:space-between;
-  align-content:center;
-}
-.header-nav-overlay {
-  display: none;
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  background: rgba(0,0,0,0.7);
-  }
-.header-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: auto;
-  background: var(--bg);
-  width: 90%;
-  max-width: 300px;
-  z-index: 10;
-  transform: translateX(-100%);
-  transition: 0.4s transform; 
-}
-.header-nav-item {
-  border-bottom: 1px solid black ;
-}
-li {
-  list-style: none;
-}
-.header-nav-anchor {
-  display: block; 
-  padding:20px;
-  color: var(--textColor);
-}
 {% endstyle %}
 <div class="width">
   <div class="header-flex">
     <a href="/" class="header-logo">
       {{ section.settings.logo | image_url: width: 200 | image_tag }}
     </a>
-
-    {%  if section.type  %}  {% endif %} 
-    <button class="header-hamburger">
-      <a href="/collections/modern-elegance-mens-collection" span class="header-hamburger-bar">Men</span></a> 
-      <a href="/collections/timeless-chic-womens-collection" span class="header-hamburger-bar">Woman</span></a> 
+      <a href="/collections/modern-elegance-mens-collection" class="header-hamburger-bar">Men</a> 
+      <a href="/collections/timeless-chic-womens-collection" class="header-hamburger-bar">Woman</a> 
       <a href="/" span class="header-hamburger-bar">Home</span></a> 
-    </button>
+ 
   </div>
 
   
