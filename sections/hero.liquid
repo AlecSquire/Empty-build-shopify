@@ -4,7 +4,7 @@
 .hero_image_container-{{ section.id }} {
   margin: 0 auto; /* Horizontally centers the container if it has a set width */
   max-width: 3000px;
-  width: {{ section.settings.image_size | append: 'em' }};
+  width: {{ section.settings.image_size }}%;
   height: auto;
   text-align: {{ section.settings.hero_text_alignment }};
   background-color: {{ section.settings.hero_background_color }};
