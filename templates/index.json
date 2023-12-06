@@ -40,7 +40,7 @@
         "hero_text_color": "#e1e1e1",
         "hero_heading_color": "#fff5ff",
         "hero_button_color": "#fff1f1",
-        "image_size": 40,
+        "image_size": 100,
         "show_background": true,
         "hero_background_color": "#4b4b4b",
         "desktop_position": "middle-center",
