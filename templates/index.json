@@ -49,65 +49,53 @@
         "font_size_button": 1.6
       }
     },
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00": {
+    "cd32a1e0-3f95-4387-94ad-1c395cf5d670": {
       "type": "product-card",
       "blocks": {
-        "a9c5c22e-2634-4ecd-b379-207dbc032188": {
+        "67fa0dcb-678a-4b51-a4e6-b9f2bbcd4135": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/versace-medusa-logo-svgrepo-com.svg",
+            "product_slider_image": "shopify:\/\/shop_images\/redbull-logo-svgrepo-com.svg",
             "product_slider_title": "",
             "link": ""
           }
         },
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0": {
+        "7ffd97f1-0716-4827-b15f-54fbb871767c": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/nike-3-logo-svgrepo-com_1.svg",
             "product_slider_title": "",
             "link": ""
           }
         },
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23": {
+        "196426ca-80dd-4d0a-9d79-ecb0199acbe0": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/the-north-face-1-logo-svgrepo-com.svg",
             "product_slider_title": "",
             "link": ""
           }
         },
-        "197d3a5e-9a27-43bc-a298-05e48b51edce": {
+        "e1b61fc3-7de3-4217-9edb-f7446d43b17a": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/ray-ban-logo-svgrepo-com.svg",
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "53f9946f-d2b0-4712-bb7f-0237e0208351": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_image": "shopify:\/\/shop_images\/adidas-4-logo-svgrepo-com.svg",
             "product_slider_title": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "a9c5c22e-2634-4ecd-b379-207dbc032188",
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0",
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23",
-        "197d3a5e-9a27-43bc-a298-05e48b51edce",
-        "53f9946f-d2b0-4712-bb7f-0237e0208351"
+        "67fa0dcb-678a-4b51-a4e6-b9f2bbcd4135",
+        "7ffd97f1-0716-4827-b15f-54fbb871767c",
+        "196426ca-80dd-4d0a-9d79-ecb0199acbe0",
+        "e1b61fc3-7de3-4217-9edb-f7446d43b17a"
       ],
       "settings": {
-        "image_size_slider": 100
+        "image_size_slider": 50
       }
     }
   },
   "order": [
     "main",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00"
+    "cd32a1e0-3f95-4387-94ad-1c395cf5d670"
   ]
 }
