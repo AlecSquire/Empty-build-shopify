@@ -35,12 +35,12 @@
         "589ff972-4b09-4c05-b7a3-73fc5e8e75dc"
       ],
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+        "hero_image": "shopify:\/\/shop_images\/model-in-gold-fashion.jpg",
         "hero_text_alignment": "center",
         "hero_text_color": "#e1e1e1",
         "hero_heading_color": "#fff5ff",
         "hero_button_color": "#fff1f1",
-        "image_size": 100,
+        "image_size": 40,
         "show_background": true,
         "hero_background_color": "#4b4b4b",
         "desktop_position": "middle-center",
@@ -55,7 +55,7 @@
         "a9c5c22e-2634-4ecd-b379-207dbc032188": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/man-holding-a-leather-bag-on-a-set-of-stairs.jpg",
+            "product_slider_image": "shopify:\/\/shop_images\/versace-medusa-logo-svgrepo-com.svg",
             "product_slider_title": "",
             "link": ""
           }
@@ -63,7 +63,7 @@
         "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/dark-shirt-mens-fashion.jpg",
+            "product_slider_image": "shopify:\/\/shop_images\/nike-3-logo-svgrepo-com_1.svg",
             "product_slider_title": "",
             "link": ""
           }
@@ -71,7 +71,23 @@
         "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
+            "product_slider_image": "shopify:\/\/shop_images\/the-north-face-1-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "197d3a5e-9a27-43bc-a298-05e48b51edce": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/ray-ban-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "53f9946f-d2b0-4712-bb7f-0237e0208351": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/adidas-4-logo-svgrepo-com.svg",
             "product_slider_title": "",
             "link": ""
           }
@@ -80,9 +96,12 @@
       "block_order": [
         "a9c5c22e-2634-4ecd-b379-207dbc032188",
         "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0",
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23"
+        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23",
+        "197d3a5e-9a27-43bc-a298-05e48b51edce",
+        "53f9946f-d2b0-4712-bb7f-0237e0208351"
       ],
       "settings": {
+        "image_size_slider": 50
       }
     }
   },
