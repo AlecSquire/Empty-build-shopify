@@ -5,50 +5,6 @@
       "settings": {
       }
     },
-    "cd92adc1-4c88-4573-ba5d-2545999f3f38": {
-      "type": "hero",
-      "blocks": {
-        "c91b7cb7-ac1b-491e-bbde-588dd7c434d5": {
-          "type": "text",
-          "settings": {
-            "hero_title": "BKLYN"
-          }
-        },
-        "62274962-d69c-4ef6-b1ec-7ce60992a9a7": {
-          "type": "rich_text",
-          "settings": {
-            "hero_description": "Its a way of life"
-          }
-        },
-        "589ff972-4b09-4c05-b7a3-73fc5e8e75dc": {
-          "type": "button",
-          "settings": {
-            "button_alignment": "center",
-            "hero_button_label": "Click Here",
-            "hero_button_link": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "c91b7cb7-ac1b-491e-bbde-588dd7c434d5",
-        "62274962-d69c-4ef6-b1ec-7ce60992a9a7",
-        "589ff972-4b09-4c05-b7a3-73fc5e8e75dc"
-      ],
-      "settings": {
-        "hero_image": "shopify:\/\/shop_images\/model-in-gold-fashion.jpg",
-        "hero_text_alignment": "center",
-        "hero_text_color": "#e1e1e1",
-        "hero_heading_color": "#fff5ff",
-        "hero_button_color": "#fff1f1",
-        "image_size": 50,
-        "show_background": true,
-        "hero_background_color": "#4b4b4b",
-        "desktop_position": "middle-center",
-        "font_size_hero": 3,
-        "font_size_para": 2,
-        "font_size_button": 1.6
-      }
-    },
     "cd32a1e0-3f95-4387-94ad-1c395cf5d670": {
       "type": "product-card",
       "blocks": {
@@ -95,7 +51,6 @@
   },
   "order": [
     "main",
-    "cd92adc1-4c88-4573-ba5d-2545999f3f38",
     "cd32a1e0-3f95-4387-94ad-1c395cf5d670"
   ]
 }
