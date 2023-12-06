@@ -1,0 +1,55 @@
+/* Base styles for .carousel-logo-swiper */
+.carousel-logo-swiper {
+  width: 100%; /* Use a relative unit to adapt to different screen sizes */
+  height: auto;
+  margin: 20px auto;
+  max-width: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Styles for .carousel-logo-swiper-slide */
+.carousel-logo-swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for images inside the carousel */
+.swiper-slide img {
+  display: block;
+  max-width: 100%; /* Ensure images are responsive within the container */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .carousel-logo-swiper {
+    width: 90%; /* Adjust as needed */
+    height: 100dvh;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel-logo-swiper {
+    width: 70%; /* Adjust as needed */
+    height: 100dvh;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carousel-logo-swiper {
+    width: 50%; /* Adjust as needed */
+    height: 100dvh;
+    margin: 0 auto;
+  }
+}
