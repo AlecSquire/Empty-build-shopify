@@ -4,91 +4,9 @@
       "type": "index",
       "settings": {
       }
-    },
-    "cd92adc1-4c88-4573-ba5d-2545999f3f38": {
-      "type": "hero",
-      "blocks": {
-        "c91b7cb7-ac1b-491e-bbde-588dd7c434d5": {
-          "type": "text",
-          "settings": {
-            "hero_title": "BKLYN"
-          }
-        },
-        "62274962-d69c-4ef6-b1ec-7ce60992a9a7": {
-          "type": "rich_text",
-          "settings": {
-            "hero_description": "Its a way of life"
-          }
-        },
-        "589ff972-4b09-4c05-b7a3-73fc5e8e75dc": {
-          "type": "button",
-          "settings": {
-            "button_alignment": "center",
-            "hero_button_label": "Click Here",
-            "hero_button_link": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "c91b7cb7-ac1b-491e-bbde-588dd7c434d5",
-        "62274962-d69c-4ef6-b1ec-7ce60992a9a7",
-        "589ff972-4b09-4c05-b7a3-73fc5e8e75dc"
-      ],
-      "settings": {
-        "hero_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
-        "hero_text_alignment": "center",
-        "hero_text_color": "#e1e1e1",
-        "hero_heading_color": "#fff5ff",
-        "hero_button_color": "#fff1f1",
-        "image_size": 100,
-        "show_background": true,
-        "hero_background_color": "#4b4b4b",
-        "desktop_position": "middle-center",
-        "font_size_hero": 3,
-        "font_size_para": 2,
-        "font_size_button": 1.6
-      }
-    },
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00": {
-      "type": "product-card",
-      "blocks": {
-        "a9c5c22e-2634-4ecd-b379-207dbc032188": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/man-holding-a-leather-bag-on-a-set-of-stairs.jpg",
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/dark-shirt-mens-fashion.jpg",
-            "product_slider_title": "",
-            "link": ""
-          }
-        },
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23": {
-          "type": "multicolumn_section",
-          "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
-            "product_slider_title": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "a9c5c22e-2634-4ecd-b379-207dbc032188",
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0",
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "cd92adc1-4c88-4573-ba5d-2545999f3f38",
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00"
+    "main"
   ]
 }
