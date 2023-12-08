@@ -1,0 +1,25 @@
+
+.swiper {
+
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.swiper-slide{
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 100%; /* Ensure images are responsive within the container */
+  object-fit: cover;
+}

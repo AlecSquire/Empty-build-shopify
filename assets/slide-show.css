@@ -1,0 +1,47 @@
+.swiper1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow:clip;
+}
+
+
+
+.swiper-slide {
+  display: flex; /* Flex display to center the image */
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 100%; /* Ensure images are responsive within the slide */
+  max-height: 100%; /* Ensure images do not exceed the height of the slide */
+  object-fit: cover;/* Change from 'cover' to 'contain' */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  z-index: 10;
+  justify-content: center;
+  align-items: center; /* Center the button's content */
+  border-radius: 50%; /* Circular buttons */
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(85, 85, 85, 0.1); /* Darker grey on hover with slightly higher opacity */
+}
+
+.swiper-button-next {
+  right: 10px; /* Adjust right position */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Adjust left position */
+}
