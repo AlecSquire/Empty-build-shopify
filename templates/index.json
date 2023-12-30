@@ -5,6 +5,19 @@
       "settings": {
       }
     },
+    "044bba88-8e48-4fe0-ab27-f68bd81571dc": {
+      "type": "Announcement-bar",
+      "settings": {
+        "footer_linklist_title": "Discover the Exclusive Sale on a Wide Range of Lifestyle Brand Products.",
+        "heading_font": "helvetica_n4",
+        "body_text": "#e8e8e8",
+        "heading_text": "#f6f6f6",
+        "announcement-background-color": "#000000",
+        "alignment": "center",
+        "paragraph": "<p><strong>click here <\/strong><\/p>",
+        "font_size_announcement": 19
+      }
+    },
     "cd92adc1-4c88-4573-ba5d-2545999f3f38": {
       "type": "hero",
       "blocks": {
@@ -90,6 +103,7 @@
   },
   "order": [
     "main",
+    "044bba88-8e48-4fe0-ab27-f68bd81571dc",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
     "b49cd914-3c13-4445-88e4-674b46c2b674"
   ]
