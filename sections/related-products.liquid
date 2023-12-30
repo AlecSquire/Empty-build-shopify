@@ -1,25 +1,25 @@
 {{ 'related-product.css' | asset_url | stylesheet_tag }}
 
 <div class="related">
-    <div class="width">
-        <h2> Related products</h2>
+  <div class="width">
+    <h2>
+      Related products</h2>
 
-        <div class="related-products">
-       </div>
-   </div>
+    <div class="related-products"></div>
+  </div>
 </div>
 
 
 {% if cart.item_count > 0 %}
-    {% assign relatedId = cart.items[0].product_id %}
+  {% assign relatedId = cart.items[0].product_id %}
 {% else %}
-    {% assign relatedId = 8841362964775 %}
+  {% assign relatedId = 8841362964775 %}
 {% endif %}
-    {{ product.id }}
+{{ product.id }}
 
-<script> 
+<script>
 
-function formatMoney (cents, format) {
+  function formatMoney (cents, format) {
   if (typeof cents == 'string') { cents = cents.replace('.',''); }
   var value = '';
   var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
@@ -61,8 +61,8 @@ function formatMoney (cents, format) {
   }
 
   return formatString.replace(placeholderRegex, value);
-};
-function buildBlocks (product) {
+  };
+  function buildBlocks (product) {
     const formattedPrice = formatMoney ( product.price, "{{ shop.money_format }}")
     const html = `
     <a class="related-product" href="${product.url}">
@@ -76,9 +76,9 @@ function buildBlocks (product) {
     </a>
     `
    return html
-}
+  }
 
-fetch(window.Shopify.routes.root + "recommendations/products.json?product_id={{ relatedId }}&limit=3")
+  fetch(window.Shopify.routes.root + "recommendations/products.json?product_id={{ relatedId }}&limit=3")
     .then(response => response.json())
     .then(({ products }) => {
         products.forEach(product => {
@@ -89,14 +89,13 @@ fetch(window.Shopify.routes.root + "recommendations/products.json?product_id={{ 
   );
 </script>
 {% schema %}
-{
- "name": "related products",
- "settings": [
-             ],
- "presets": [ 
-    {
-    "name": "related products"
-    }
-            ]  
-}
-  {% endschema %}
+  {
+    "name": "related products",
+    "settings": [],
+    "presets": [
+      {
+        "name": "related products"
+      }
+    ]
+  }
+{% endschema %}

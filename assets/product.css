@@ -18,7 +18,8 @@
   text-align: center;
 }
 .buy-now-button {
-  background-color: steelblue;
+  background-color: black;
+  color: black;
 }
 .product-container {
   display: grid;

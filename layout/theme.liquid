@@ -39,10 +39,9 @@
       rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bree+Serif&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
     {{ content_for_header }}
-    
-  
+
 
     <style>
     /* ... Your internal CSS ... */
@@ -52,10 +51,10 @@
 </head>
 <body>
   {% sections 'header-group' %}
-  {{ content_for_layout }}
-  
+{{ content_for_layout }}
 
-<!-- Additional Scripts if any -->
 
-{% sections "footer-group" %}
+  <!-- Additional Scripts if any -->
+
+  {% sections "footer-group" %}
 </body></html>

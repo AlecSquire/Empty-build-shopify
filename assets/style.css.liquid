@@ -7,8 +7,9 @@
   --textColor: {{ settings.textColor }}; 
   --linkColor: {{ settings.linkColor }};
   color: {{ section.settings.color_schemes.text }};
-  background-color: {{ section.settings.color_schemes.background }} 
+  background-color: {{ section.settings.color_schemes.background }}
 }
+
 /* 
 Light Pink (#FFF1F1)
 Warm Gray (#E0E0E0)
@@ -67,6 +68,7 @@ a:hover::before {
   background: var(--backgroundColor);
   color: var(--textColor);
   padding:0;
+  font-family: 'Quicksand', sans-serif;
   margin:0;
 } 
 
@@ -78,9 +80,21 @@ a:hover::before {
 
 h1 {
 /*  h2, h3 { */
-   text-transform: uppercase; 
+  text-transform: capitalize;
    letter-spacing:1px;
    font-weight:400;
    margin-bottom: 20px;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 300; /* Bold */
 
+}
+h2, h3, h4, h5 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100; /* Light */
+}
+/* Example usage for specific elements */
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100; /* Light */
 }

@@ -1,0 +1,53 @@
+<div class="api-container">
+    <div class="width">
+        <div class="api--title"><h1> If you like that, we are sure youll love this</h1></div>
+         <div class="related-products"> 
+
+         </div>    
+    </div>
+</div>
+
+{% if cart.item_count > 0 %}
+    {% assign relatedId = cart.items[0].product_id %}
+{% else %}
+    {% assign relatedId =  47135344230695 %}
+{% endif %}
+
+
+<script>
+
+function buildBlocks (product) {
+    const html = `
+    <a class="related-product" href="${product.url}">
+        <img src="${product.images[0]}" />
+        <h3> ${product.title}</h3>
+        <span> %{product.price} </span>
+    </a>
+`
+return html 
+}
+
+fetch(window.Shopify.routes.root + "recommendations/products.json?product_id={{ relatedId }}&limit=4")
+  .then(response => response.json())
+  .then(({ products }) => {
+    products.forEach(product => {
+        const html = buildBlocks (product)
+        document.querySelector('.related-products').innerHTML += html
+    })
+  }
+);
+
+</script>
+
+{% schema %}
+{
+    "name": "test-api",
+    "settings": [],
+            "presets": [
+                {
+                "name": "test-api"
+                }
+            ]
+        
+}
+{% endschema %}
