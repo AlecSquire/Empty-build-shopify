@@ -35,7 +35,7 @@
         "589ff972-4b09-4c05-b7a3-73fc5e8e75dc"
       ],
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+        "hero_image": "shopify:\/\/shop_images\/matheus-ferrero-TkrRvwxjb_8-unsplash.png",
         "hero_text_alignment": "center",
         "hero_text_color": "#e1e1e1",
         "hero_heading_color": "#fff5ff",
@@ -49,46 +49,48 @@
         "font_size_button": 1.6
       }
     },
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00": {
-      "type": "product-card",
+    "b49cd914-3c13-4445-88e4-674b46c2b674": {
+      "type": "slide-show",
       "blocks": {
-        "a9c5c22e-2634-4ecd-b379-207dbc032188": {
+        "1b697afa-018f-4c03-bb78-a5811c063d02": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/man-holding-a-leather-bag-on-a-set-of-stairs.jpg",
-            "product_slider_title": "",
+            "slide_image": "shopify:\/\/shop_images\/man-hiking-in-mountains.jpg",
+            "slide_title": "",
             "link": ""
           }
         },
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0": {
+        "5518a74b-787a-40dd-bb2c-15486eca2c00": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/dark-shirt-mens-fashion.jpg",
-            "product_slider_title": "",
+            "slide_image": "shopify:\/\/shop_images\/nordwood-themes-6V-vJpPzvh8-unsplash.png",
+            "slide_title": "",
             "link": ""
           }
         },
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23": {
+        "b6a5c76b-027f-4aa5-b692-abd0cc24bf0e": {
           "type": "multicolumn_section",
           "settings": {
-            "product_slider_Image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
-            "product_slider_title": "",
+            "slide_image": "shopify:\/\/shop_images\/helena-lopes-PGnqT0rXWLs-unsplash.png",
+            "slide_title": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "a9c5c22e-2634-4ecd-b379-207dbc032188",
-        "f4c25dc3-ff6a-4013-a1b9-1dc11d8503a0",
-        "8a12df1f-790e-4d2e-9eea-fdfd7fcd7b23"
+        "1b697afa-018f-4c03-bb78-a5811c063d02",
+        "5518a74b-787a-40dd-bb2c-15486eca2c00",
+        "b6a5c76b-027f-4aa5-b692-abd0cc24bf0e"
       ],
       "settings": {
+        "fill-screen": true,
+        "slideshow_image_size": 100
       }
     }
   },
   "order": [
     "main",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
-    "85ba8c69-c268-4a6d-ab0e-681296a49e00"
+    "b49cd914-3c13-4445-88e4-674b46c2b674"
   ]
 }
