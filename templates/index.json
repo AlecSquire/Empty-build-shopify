@@ -99,12 +99,59 @@
         "fill-screen": true,
         "slideshow_image_size": 100
       }
+    },
+    "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8": {
+      "type": "carousel-logo",
+      "blocks": {
+        "12596d65-9ee2-4fe3-848e-bd8226824ee6": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/versace-medusa-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "7ecf17d2-a9e8-4a26-af13-b8a82f384104": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/harley-davidson-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "38ed0bb5-d902-4fab-b728-af9ab12a7d99": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/ray-ban-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        },
+        "f8ecba7f-a8ac-4f42-b801-9dcab5df2ecf": {
+          "type": "multicolumn_section",
+          "settings": {
+            "product_slider_image": "shopify:\/\/shop_images\/the-north-face-1-logo-svgrepo-com.svg",
+            "product_slider_title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "12596d65-9ee2-4fe3-848e-bd8226824ee6",
+        "7ecf17d2-a9e8-4a26-af13-b8a82f384104",
+        "38ed0bb5-d902-4fab-b728-af9ab12a7d99",
+        "f8ecba7f-a8ac-4f42-b801-9dcab5df2ecf"
+      ],
+      "settings": {
+        "image_size_slider": 50
+      }
     }
   },
   "order": [
     "main",
     "044bba88-8e48-4fe0-ab27-f68bd81571dc",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
-    "b49cd914-3c13-4445-88e4-674b46c2b674"
+    "b49cd914-3c13-4445-88e4-674b46c2b674",
+    "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8"
   ]
 }
