@@ -62,44 +62,6 @@
         "font_size_button": 1.6
       }
     },
-    "b49cd914-3c13-4445-88e4-674b46c2b674": {
-      "type": "slide-show",
-      "blocks": {
-        "1b697afa-018f-4c03-bb78-a5811c063d02": {
-          "type": "multicolumn_section",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/man-hiking-in-mountains.jpg",
-            "slide_title": "",
-            "link": ""
-          }
-        },
-        "5518a74b-787a-40dd-bb2c-15486eca2c00": {
-          "type": "multicolumn_section",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/nordwood-themes-6V-vJpPzvh8-unsplash.png",
-            "slide_title": "",
-            "link": ""
-          }
-        },
-        "b6a5c76b-027f-4aa5-b692-abd0cc24bf0e": {
-          "type": "multicolumn_section",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/helena-lopes-PGnqT0rXWLs-unsplash.png",
-            "slide_title": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1b697afa-018f-4c03-bb78-a5811c063d02",
-        "5518a74b-787a-40dd-bb2c-15486eca2c00",
-        "b6a5c76b-027f-4aa5-b692-abd0cc24bf0e"
-      ],
-      "settings": {
-        "fill-screen": true,
-        "slideshow_image_size": 100
-      }
-    },
     "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8": {
       "type": "carousel-logo",
       "blocks": {
@@ -145,13 +107,98 @@
       "settings": {
         "image_size_slider": 50
       }
+    },
+    "42efdbb3-277f-4f67-8d28-9677a63328c9": {
+      "type": "hero",
+      "blocks": {
+        "1b7ed0ea-7dbd-4d74-909b-7bfaf3630c49": {
+          "type": "button",
+          "settings": {
+            "button_alignment": "center",
+            "hero_button_label": "Check it out",
+            "hero_button_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "15b53a24-e83e-49dc-b046-b7f96df4f8bb": {
+          "type": "text",
+          "settings": {
+            "hero_title": "Discover Styles for Every Body"
+          }
+        },
+        "c53ae95c-39ed-4847-b45d-4ccac527bc73": {
+          "type": "rich_text",
+          "settings": {
+            "hero_description": "it's about embracing diversity, breaking stereotypes, and expressing yourself authentically."
+          }
+        }
+      },
+      "block_order": [
+        "1b7ed0ea-7dbd-4d74-909b-7bfaf3630c49",
+        "15b53a24-e83e-49dc-b046-b7f96df4f8bb",
+        "c53ae95c-39ed-4847-b45d-4ccac527bc73"
+      ],
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/helena-lopes-PGnqT0rXWLs-unsplash.png",
+        "hero_text_alignment": "center",
+        "hero_text_color": "#4c4c4c",
+        "hero_heading_color": "#030303",
+        "hero_button_color": "#545454",
+        "image_size": 100,
+        "show_background": true,
+        "hero_background_color": "#f5f5f5",
+        "desktop_position": "bottom-left",
+        "font_size_hero": 2.4,
+        "font_size_para": 1.4,
+        "font_size_button": 1.2
+      }
+    },
+    "580db1f2-bf59-4c87-9714-8b25ddf4a3ae": {
+      "type": "footer",
+      "blocks": {
+        "b1292f5c-2137-4983-9d94-0fa304f43d35": {
+          "type": "navigation",
+          "settings": {
+            "menu_footer": "nav-bar"
+          }
+        },
+        "4dae7584-d7b6-4efd-ab88-e68d2c29f5e1": {
+          "type": "richtext",
+          "settings": {
+            "title_footer": "Our mission",
+            "text_content_footer": "Striving for minimal environmental impact, we continuously work on reducing waste and conserving resources. Our packaging is recyclable, and we encourage our customers to join us in this green initiative."
+          }
+        },
+        "0ef26bac-311c-4d0c-bab9-5258b2bf6fe0": {
+          "type": "Newsletter",
+          "settings": {
+            "newsletter_title": "Stay Updated",
+            "newsletter_description": "Subscribe to receive the latest updates, special offers, and exclusive news."
+          }
+        },
+        "4ab7e8aa-2e70-4bd9-93ba-94611a2477a1": {
+          "type": "navigation",
+          "settings": {
+            "menu_footer": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "b1292f5c-2137-4983-9d94-0fa304f43d35",
+        "4dae7584-d7b6-4efd-ab88-e68d2c29f5e1",
+        "0ef26bac-311c-4d0c-bab9-5258b2bf6fe0",
+        "4ab7e8aa-2e70-4bd9-93ba-94611a2477a1"
+      ],
+      "settings": {
+        "copyright": "© 2023 - BKLN \/ Powered by Shopify"
+      }
     }
   },
   "order": [
     "main",
     "044bba88-8e48-4fe0-ab27-f68bd81571dc",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
-    "b49cd914-3c13-4445-88e4-674b46c2b674",
-    "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8"
+    "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8",
+    "42efdbb3-277f-4f67-8d28-9677a63328c9",
+    "580db1f2-bf59-4c87-9714-8b25ddf4a3ae"
   ]
 }
