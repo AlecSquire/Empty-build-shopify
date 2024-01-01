@@ -1,6 +1,9 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
 
-{{ product.featured_image | image_url: width: 200 | image_tag }}
+{% for image in product.images %}
+  {{ product.featured_image | image_url: width: 400 | image_tag: alt: 'Product Image', loading: 'eager' }}
+
+{% endfor %}
 <H3>{{ product.title }}</H3>
 <p>
   {{ product.price | money }}</p>
@@ -9,19 +12,46 @@
 </div>
 {% form 'product'
   , product %}
-  <select name="id">
-    {% for variant in product.variants %}
-      <option
-        value="{{ variant.id }}"
-        {% if variant == product.selected_or_first_available_variant %}
-        selected="selected"
-        {% endif %}>
-        {{ variant.title }} - {{ variant.price | money }}
-      </option>
-    {% endfor %}
-  </select>
+  <div class="product-option">
+    <label for="product-select">
+      Variant
+    </label>
+    <select
+      class="product-select"
+      id="product-select"
+      name="id">
+      {% for variant in product.variants %}
+        <option
+          value="{{ variant.id }}"
+          {% if variant == product.selected_or_first_available_variant %}
+          selected="selected"
+          {% endif %}>
+          {{ variant.title }} - {{ variant.price | money }}
+        </option>
+        <input type="submit" value="Add to cart">
+        {{ form | payment_button }}
+      {% endfor %}
+    </select>
+  </div>
 
-  <input type="submit" value="Add to cart">
+  <div class="product-option">
+    <label for="quantity">
+      Quantity
+    </label>
+    <input
+      id="quantity"
+      type="text"
+      name="quantity"
+      value="1"
+      min="1"
+      class="product-quantity">
+  </div>
+
+
+  <input
+    type="submit"
+    class="product-add"
+    value="Add to cart">
   <input
     type="text"
     name="quantity"
