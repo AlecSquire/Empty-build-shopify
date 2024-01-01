@@ -1,133 +1,43 @@
-{% style %}
-  /* Styles for the cart container */
-  .cart-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-  }
+{% if cart.empty? %}
+  <div class="empty-cart-div">
+    <h3>Oh no... Your cart is empty!</h3>
+  
 
-  /* Styles for cart items */
-  .cart-item {
-    display: flex;
-    flex-direction: column;
-    /* Display items in a column on small screens */
-    margin-bottom: 20px;
-  }
-
-  .cart-item img {
-    max-width: 100%;
-    /* Make images responsive */
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .cart-item-info {
-    text-align: center;
-    /* Center text on small screens */
-  }
-
-  .cart-item-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-  }
-
-  .cart-item-price {
-    font-size: 16px;
-    color: #777;
-  }
-
-  .cart-total {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    /* Display total and button in a column on small screens */
-    align-items: center;
-  }
-
-  .checkout-button {
-    margin-top: 10px;
-    /* Add some space between total and button on small screens */
-  }
-
-  /* Media query for responsiveness */
-  @media only screen and (min-width: 768px) {
-    .cart-item {
-      flex-direction: row;
-      /* Display items in a row on larger screens */
-    }
-
-    .cart-item img {
-      margin-bottom: 0;
-      margin-right: 20px;
-    }
-
-    .cart-item-info {
-      text-align: left;
-    }
-
-    .cart-total {
-      flex-direction: row;
-      /* Display total and button in a row on larger screens */
-      justify-content: space-between;
-    }
-  }
-{% endstyle %}{% endstyle %}{% if cart.empty? %}
-<div class="empty-cart-div">
-  <h3>Oh no... Your cart is empty!</h3>
-</div>{% else %}
-<div class="cart-container">
-  <h2>Your Cart</h2>
-  <form
-    action="{{ routes.cart_url }}"
-    method="post"
-    class="cart-form">
-    {% for item in cart.items %}
-      <div class="cart-item">
-        <a href="{{ item.product.url }}" class="cart-item-link">
-          {{ item.product.title }}
-        </a>
-        <div class="cart-item-info">
-          <span class="cart-item-price">{{ item.product.price | money }}</span>
-          <input
-            type="text"
-            name="updates[]"
-            value="{{ item.quantity }}"
-            class="cart-item-quantity">
-          <input
-            type="submit"
-            value="Update cart"
-            class="cart-update-button">
-          <a href="{{ item.url_to_remove }}" class="cart-remove-link">Remove</a>
-          {{ item.image | image_url: width: 200 | image_tag }}
-        </div>
-
-        {% unless item.properties == empty %}
-          {% for property in item.properties %}
-            <div class="cart-item-property">
-              {{ property.first }}:
-              {% if property.last contains '/uploads/' %}
-                <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
-              {% else %}
-                {{ property.last }}
-              {% endif %}
-            </div>
-          {% endfor %}
-        {% endunless %}
       </div>
-    {% endfor %}
-  </form>
+{% else %}
+  <h2>Your Cart</h2>
+  <form action="{{ routes.cart_url }}" method="post">
+    {% for item in cart.items %}
+      <div class="product.cart">
+        <a href="{{ item.product.url }}"> 
+          {{ item.product.title }}</a>
+          {{ item.product.price | money }}
+          <input type="text" name="updates[]" value="{{ item.quantity }}">
+          <input type="submit" value="Update cart">
+          <a href="{{ item.url_to_remove }}">Remove</a>
+        {{ item.image | image_url: width: 200 | image_tag }}
+        
+  {% unless item.properties == empty %}
+    {% for property in item.properties %}
+      {{ property.first }}:
 
-  <form class="checkout-form">
+      {% if property.last contains '/uploads/' %}
+        <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+      {% else %}
+        {{ property.last }}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+
+        
+        </form>
+      </div>
+     
+    {% endfor %}
+<form>
     <input
       type="submit"
       name="checkout"
-      value="Proceed to Checkout"
-      class="checkout-button">
+      value="Checkout">
   </form>
-</div>{% endif %}
+{% endif %}

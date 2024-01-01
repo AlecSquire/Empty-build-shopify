@@ -51,10 +51,11 @@
 </head>
 <body>
   {% sections 'header-group' %}
+
 {{ content_for_layout }}
 
 
   <!-- Additional Scripts if any -->
+  {% sections 'footer-group' %}
 
-  {% sections "footer-group" %}
 </body></html>

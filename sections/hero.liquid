@@ -13,7 +13,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: {{ section.settings.desktop_position }};
 }
+
   .hero-image {
     width: 100%;
   }
@@ -302,7 +304,7 @@
             "type": "text",
             "id": "hero_button_label",
             "label": "Button Label",
-            "default": "Click Here"
+            "default": "<a> click here </a>"
           },
           {
             "type": "url",

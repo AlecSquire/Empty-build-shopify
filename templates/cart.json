@@ -4,9 +4,15 @@
       "type": "cart",
       "settings": {
       }
+    },
+    "1fbe3663-b298-4a11-9aa2-76a912a89c0d": {
+      "type": "related-products",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1fbe3663-b298-4a11-9aa2-76a912a89c0d"
   ]
 }

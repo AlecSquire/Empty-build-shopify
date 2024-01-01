@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "external-video",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

@@ -5,10 +5,11 @@
    max-width: {{ section.settings.logo_width }}px;
    height: auto; 
     }
-  
+ 
+
   @media screen and (max-width: 600px) {
     body {
-      color: blue;
+      
     }
   }
   
@@ -65,8 +66,7 @@
         <a href="/" span class="header-hamburger-bar">Home</span></a> 
    
     </div>
-  
-    
+
       <p style="color: {{ settings.color_schemes.text }};"></p>
       <ul class="header-nav">
         {% for link in section.settings.navigation.links %}
