@@ -14,7 +14,7 @@
         "heading_text": "#f6f6f6",
         "announcement-background-color": "#000000",
         "alignment": "center",
-        "paragraph": "<p><strong>click here <\/strong><\/p>",
+        "paragraph-a": "<p>Add links or other text here<\/p>",
         "font_size_announcement": 19
       }
     },
@@ -151,46 +151,6 @@
         "font_size_para": 1.4,
         "font_size_button": 1.2
       }
-    },
-    "580db1f2-bf59-4c87-9714-8b25ddf4a3ae": {
-      "type": "footer",
-      "blocks": {
-        "b1292f5c-2137-4983-9d94-0fa304f43d35": {
-          "type": "navigation",
-          "settings": {
-            "menu_footer": "nav-bar"
-          }
-        },
-        "4dae7584-d7b6-4efd-ab88-e68d2c29f5e1": {
-          "type": "richtext",
-          "settings": {
-            "title_footer": "Our mission",
-            "text_content_footer": "Striving for minimal environmental impact, we continuously work on reducing waste and conserving resources. Our packaging is recyclable, and we encourage our customers to join us in this green initiative."
-          }
-        },
-        "0ef26bac-311c-4d0c-bab9-5258b2bf6fe0": {
-          "type": "Newsletter",
-          "settings": {
-            "newsletter_title": "Stay Updated",
-            "newsletter_description": "Subscribe to receive the latest updates, special offers, and exclusive news."
-          }
-        },
-        "4ab7e8aa-2e70-4bd9-93ba-94611a2477a1": {
-          "type": "navigation",
-          "settings": {
-            "menu_footer": "main-menu"
-          }
-        }
-      },
-      "block_order": [
-        "b1292f5c-2137-4983-9d94-0fa304f43d35",
-        "4dae7584-d7b6-4efd-ab88-e68d2c29f5e1",
-        "0ef26bac-311c-4d0c-bab9-5258b2bf6fe0",
-        "4ab7e8aa-2e70-4bd9-93ba-94611a2477a1"
-      ],
-      "settings": {
-        "copyright": "© 2023 - BKLN \/ Powered by Shopify"
-      }
     }
   },
   "order": [
@@ -198,7 +158,6 @@
     "044bba88-8e48-4fe0-ab27-f68bd81571dc",
     "cd92adc1-4c88-4573-ba5d-2545999f3f38",
     "bff0a33c-f2e7-497b-9c7d-31a7bc0734f8",
-    "42efdbb3-277f-4f67-8d28-9677a63328c9",
-    "580db1f2-bf59-4c87-9714-8b25ddf4a3ae"
+    "42efdbb3-277f-4f67-8d28-9677a63328c9"
   ]
 }
