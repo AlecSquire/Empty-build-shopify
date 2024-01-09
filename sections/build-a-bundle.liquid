@@ -1,0 +1,49 @@
+<script src="{{ 'build-a-bundle.js' | asset_url }}" defer="defer"></script>
+{% assign collection = section.settings.collection %}
+
+<style>
+  .bundle {
+    max-width: 100vw;
+  }
+  .bundle-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>
+
+<bundle-builder>
+  <h1>Build Your Bundle</h1>
+
+  <h5>Your products:</h5>
+  <div class="bundle-product-list"></div>
+
+  <div class="bundle-products">
+    {% for product in collection.products %}
+      {% render 'bundle-product-card', product: product %}
+    {% endfor %}
+  </div>
+
+</bundle-builder>
+
+{% schema %}
+  {
+    "name": "Build A Bundle",
+    "tag": "section",
+    "class": "build-a-bundle",
+    "settings": [ 
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection",
+        "info": "Select a collection to display products from."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Build A Bundle",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

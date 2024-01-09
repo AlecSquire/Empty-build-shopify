@@ -1,0 +1,94 @@
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper', {
+
+      // Default parameters
+      direction: 'horizontal',
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar'
+      },
+      autoplay: {
+        delay: 1, // Small delay for near-continuous scroll
+      },
+      speed: 20000,
+      slidesPerView: 3,
+      spaceBetween: 1
+    });
+  });
+{% endjavascript %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide" data-swiper-autoplay="1">
+        <img src="{{ block.settings.product_slider_image | img_url: '1200x1200' }}" alt="{{ block.settings.product_slider_title }}">
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% style %}
+  .swiper img {
+    width: {{ section.settings.image_size_slider }}%;
+  }
+
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "Product slider",
+    "settings": [
+      {
+        "type": "range",
+        "id": "carousel_size",
+        "min": 30,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "carousel size",
+        "default": 50
+      }
+    ],
+    "blocks": [
+      {
+        "type": "multicolumn_section",
+        "name": "Multicolumn Section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Select Image",
+            "id": "product_slider_image"
+          }, {
+            "type": "text",
+            "label": "Title",
+            "id": "product_slider_title"
+          }, {
+            "type": "url",
+            "label": "Link",
+            "id": "link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product slider",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

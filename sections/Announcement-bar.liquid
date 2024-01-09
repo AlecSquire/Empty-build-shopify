@@ -1,32 +1,24 @@
-  <div class="announcement-container font_size_announcement announcement-background-color">
-    <h3 class="heading_text">
-      {{ section.settings.footer_linklist_title }}
-    </h3>
-      <p class="para-color">
-      {{ section.settings.paragraph-a}}</p>
-  </div>
+<div class="announcement-container font_size_announcement announcement-background-color" style="text-align: {{ section.settings.alignment }}; background-color: {{ section.settings.announcement-background-color }}; font-size: {{ section.settings.font_size_announcement }};">
+
+  <h3 class="heading_text" style="color: {{ section.settings.heading_text }}; font-family: {{ section.settings.heading_font.family }}; font-size: {{ section.settings.font_size_announcement }}px;">
+    {{ section.settings.announcment_title }}
+  </h3>
+  <p class="para-color" style="color: {{ section.settings.body_text }}; font-size: {{ section.settings.font_size_announcement }}px;">
+    {{ section.settings.paragraph-a }}
+  </p>
+
+</div>
+
 
   {% style %}
 
-  .heading_text {
-    font-family: {{ section.settings.heading_font.family }};
-  }
-  .font_size_announcement {
-    font-size: {{ section.settings.font_size_announcement }};
-  }
-  .heading_text {
-    color: {{ section.settings.heading_text }};
-  }
-  .para-color {
-  text-decoration-color: {{ section.settings.body_text }} !important;
-  color: {{ section.settings.body_text }} !important;
-  }
-  .announcement-background-color {
-    background-color: {{ section.settings.announcement-background-color }};
-  }
   .announcement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    text-align: {{ section.settings.alignment }};
+
   }
 
   {% endstyle %}
@@ -37,7 +29,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "footer_linklist_title",
+          "id": "announcment_title",
           "label": "Heading",
           "default": "This bar is used for short important announcements!"
         },
@@ -74,8 +66,7 @@
         {
           "type": "richtext",
           "id": "paragraph-a",
-          "label": "Paragraph",
-          "default": "<p>Add links or other text here</p>"
+          "label": "Paragraph"
         },
         {
           "type": "range",

@@ -1,64 +1,155 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
 
-{% for image in product.images %}
-  {{ product.featured_image | image_url: width: 400 | image_tag: alt: 'Product Image', loading: 'eager' }}
+{% comment %} {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %} {% endcomment %}
 
-{% endfor %}
-<H3>{{ product.title }}</H3>
-<p>
-  {{ product.price | money }}</p>
-<div>
-  {{ product.description }}
-</div>
-{% form 'product'
-  , product %}
-  <div class="product-option">
-    <label for="product-select">
-      Variant
-    </label>
-    <select
-      class="product-select"
-      id="product-select"
-      name="id">
-      {% for variant in product.variants %}
-        <option
-          value="{{ variant.id }}"
-          {% if variant == product.selected_or_first_available_variant %}
-          selected="selected"
-          {% endif %}>
-          {{ variant.title }} - {{ variant.price | money }}
-        </option>
-        <input type="submit" value="Add to cart">
-        {{ form | payment_button }}
-      {% endfor %}
-    </select>
-  </div>
-
-  <div class="product-option">
-    <label for="quantity">
-      Quantity
-    </label>
-    <input
-      id="quantity"
-      type="text"
-      name="quantity"
-      value="1"
-      min="1"
-      class="product-quantity">
-  </div>
+<div class="product">
+  <div class="width">
 
 
+    <div class="product--card">
+      {{ product.featured_image | image_url: width: 600 |
+      image_tag:
+        widths: '300, 600',
+        sizes: '(min-width: 400px) 298px, 78.75vw',
+        style: 'width: 300px' }}
+    
+
+      <H1>{{ product.title }}</H1>
+      <p>
+        {{ product.price | money }}</p>
+
+      <div>
+        {{ product.description }}
+      </div>
+
+    </div>
+
+    {% comment %} <form method="post" action="/cart/add" id="add-to-cart-form">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+  <input type="submit" value="ADD TO CART" class="add-to-cart-button" />
+</form> {% endcomment %}
+    {% form 'product'
+      , product %}
+
+      <div class="product-option">
+        <label for="product-select">
+          Variant
+        </label>
+        <select
+          class="product-select"
+          id="product-select"
+          name="id">
+          {% for variant in product.variants %}
+            <option
+              value="{{ variant.id }}"
+              {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+              {% endif %}>
+              {{ variant.title }} - {{ variant.price | money }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+   
+
+      <button {%  unless product.selected_or_first_available_variant.available %}disabled  {% endunless %} 
+        id="add-to-cart"
+        type="submit"
+        value="Add to cart"
+        class="product-add">
+      {% if product.selected_or_first_available_variant.available %}
+        Add to cart
+      {% else %}
+        Out Of stock
+      </button>
+
+    {% endif %}
+
+    <button {%  unless product.selected_or_first_available_variant.available %}disabled  {% endunless %} 
+      id="buy-it-now"
+      type="submit"
+      value="buy it now"
+      class="product-add">
+    {% if product.selected_or_first_available_variant.available %}
+      Buy it Now
+    {% else %}
+      Out Of Stock
+    </button>
+  {% endif %}
+
+
+
+<div class="product-option">
+  <label for="quantity">
+    Quantity
+  </label>
   <input
-    type="submit"
-    class="product-add"
-    value="Add to cart">
-  <input
-    type="text"
+    id="quantity"
     name="quantity"
-    min="1"
-    value="1">
-  <div class="buy-now-button">
-    {{ form | payment_button }}
-  </div>
+    value="1"
+    class="product-quantity">
+</div>
 
+
+<input
+  type="text"
+  name="quantity"
+  min="1"
+  value="1">
+<div class="buy-now-button">
+  {{ form | payment_button }}
 {% endform %}
+</div></div></div>
+
+{% javascript %}
+
+
+document.querySelector('#buy-it-now').addEventListener("click", (e) => { 
+    e.preventDefault();
+
+    // Logic to determine the selected variant
+    let selectedVariantId = document.querySelector("#product-select").value;
+    let matchedVariant = product.variants.find(variant => variant.id === selectedVariantId);
+
+    // Change button text and behavior based on variant availability
+    let add = document.querySelector("#add-to-cart");
+    let buy = document.querySelector("#buy-it-now");
+
+    if (matchedVariant.available) {
+        add.textContent = "Add to Cart";
+        add.disabled = false;
+        buy.textContent = "Buy it Now";
+        buy.disabled = false;
+    } else {
+        add.textContent = "Out of Stock";
+        add.disabled = true;
+        buy.textContent = "Out of Stock";
+        buy.disabled = true;
+    }
+
+    // Modify form submission behavior
+    let form = document.querySelector('.shopify-product-form');
+    let input = document.createElement('input');
+    input.value = "/checkout";
+    input.type = "hidden";
+    input.name = "return_to";
+
+    form.appendChild(input);
+    form.submit();
+});
+
+
+{% endjavascript %}
+
+{% schema %}
+  { 
+    "name": "product",
+    "presets": [
+      {
+        "name": "product"
+      }
+    ]
+  }
+{% endschema %}

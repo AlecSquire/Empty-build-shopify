@@ -1,0 +1,109 @@
+<div
+  style="justify-content: {{ section.settings.image_position }}"
+  class="promo-box"
+  data-image-position="{{ section.settings.image_position }}">
+  <div class="promo-box__image-wrapper">
+    <img src="{{ section.settings.image_promo_box | img_url: 'master' }}" alt="{{ section.settings.title_promo_box }}" />
+  </div>
+  <div class="promo-box__content">
+    <h2>{{ section.settings.title_promo_box }}</h2>
+    {{ section.settings.content_promo_box | strip_tags }}
+  </div>
+</div>
+
+{% stylesheet %}
+  .promo-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
+  }
+
+
+  /*
+
+   .promo-box[data-image-position="left"] {
+   justify-content: flex-start;
+   }
+
+   .promo-box[data-image-position="right"] {
+   justify-content: flex-end;
+   }
+*/
+
+  .promo-box__image-wrapper {
+    max-width: 100% min-height: 200px;
+    /* Adjust as needed */
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .promo-box__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .promo-box__content {
+    max-width: 50%;
+    padding: 1rem;
+    background-color: #fafafa;
+    /* Adjust based on theme */
+    border-radius: 5px;
+    aligh-self: center;
+  }
+
+  .promo-box__content h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-box__content p {
+    line-height: 1.5;
+  }
+{% endstylesheet %}
+
+{% schema %}
+  {
+    "name": "Promo box",
+    "tag": "section",
+    "class": "promo-box",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_promo_box",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title_promo_box",
+        "label": "Heading",
+        "default": "Promo title"
+      }, {
+        "type": "richtext",
+        "id": "content_promo_box",
+        "label": "Rich Text"
+      }, {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Promo box-TEST"
+      }
+    ]
+  }
+{% endschema %}

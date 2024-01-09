@@ -1,0 +1,18 @@
+<style>
+  .product-card {
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .bundle-add-product {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+</style>
+<product-card class="product-card" data-product="{{ product | json }}">
+  <h3>{{ product.title }}</h3>
+  <button class="bundle-add-product">Add to bundle</button>
+</product-card>
